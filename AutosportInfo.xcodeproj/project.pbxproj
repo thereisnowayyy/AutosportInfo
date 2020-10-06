@@ -3,10 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D756FB1F67691836946ACC /* Pods_AutosportInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F970C8117597310FBF6DF6 /* Pods_AutosportInfo.framework */; };
+		911CDA9D252333BC00EB79D9 /* Formula1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */; };
+		911CDA9E252333BC00EB79D9 /* Formula1-Wide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */; };
+		911CDA9F252333BC00EB79D9 /* Formula1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */; };
+		911CDAA0252333BC00EB79D9 /* Formula1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */; };
+		911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911CDAA1252337F600EB79D9 /* UIFont.swift */; };
+		911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB29F2510FAA500DEE772 /* NetworkService.swift */; };
+		911FB2A4251240A600DEE772 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A3251240A600DEE772 /* FirstTableViewController.swift */; };
+		911FB2A625125C2200DEE772 /* DetailDriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */; };
+		911FB2A8251266CD00DEE772 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */; };
+		911FB2AA25126B2A00DEE772 /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A925126B2A00DEE772 /* TeamsModel.swift */; };
+		911FB2AC25126E2100DEE772 /* TeamsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2AB25126E2100DEE772 /* TeamsNetworkService.swift */; };
+		911FB2AE2512886B00DEE772 /* DetailTeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */; };
+		911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2B12517D66900DEE772 /* CircuitModel.swift */; };
+		9126C72B252B260A00ED0D5D /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */; };
 		912E91E8250A2E9C0078AACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91E7250A2E9C0078AACB /* AppDelegate.swift */; };
 		912E91EA250A2E9C0078AACB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91E9250A2E9C0078AACB /* SceneDelegate.swift */; };
 		912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91EB250A2E9C0078AACB /* FirstViewController.swift */; };
@@ -15,9 +30,45 @@
 		912E91F4250A2E9C0078AACB /* AutosportInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912E91F2250A2E9C0078AACB /* AutosportInfo.xcdatamodeld */; };
 		912E91F6250A2E9E0078AACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912E91F5250A2E9E0078AACB /* Assets.xcassets */; };
 		912E91F9250A2E9E0078AACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */; };
+		912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9200250A2FE30078AACB /* DriversViewController.swift */; };
+		9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */; };
+		918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */; };
+		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
+		91DC86C8251F892A00A673F2 /* TeamColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC86C7251F892A00A673F2 /* TeamColors.swift */; };
+		91EF053E250BFC4F007F12E1 /* JsonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF053D250BFC4F007F12E1 /* JsonInfo.swift */; };
+		91FC3FB6251A1387003FBF97 /* ResultsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */; };
+		91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		91DC86C6251E3D0000A673F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		79F970C8117597310FBF6DF6 /* Pods_AutosportInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutosportInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold.ttf"; sourceTree = "<group>"; };
+		911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
+		911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Black.ttf"; sourceTree = "<group>"; };
+		911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
+		911CDAA1252337F600EB79D9 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		911FB29F2510FAA500DEE772 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		911FB2A3251240A600DEE772 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
+		911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDriverInfoViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		911FB2A925126B2A00DEE772 /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
+		911FB2AB25126E2100DEE772 /* TeamsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkService.swift; sourceTree = "<group>"; };
+		911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamInfoViewController.swift; sourceTree = "<group>"; };
+		911FB2B12517D66900DEE772 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
+		9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		912E91E4250A2E9C0078AACB /* AutosportInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutosportInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		912E91E7250A2E9C0078AACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912E91E9250A2E9C0078AACB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +79,17 @@
 		912E91F5250A2E9E0078AACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912E91F8250A2E9E0078AACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912E91FA250A2E9E0078AACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912E9200250A2FE30078AACB /* DriversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversViewController.swift; sourceTree = "<group>"; };
+		9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsNetworkService.swift; sourceTree = "<group>"; };
+		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
+		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		91A363BF2519309300B739D8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		91DC86C7251F892A00A673F2 /* TeamColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamColors.swift; sourceTree = "<group>"; };
+		91EF053D250BFC4F007F12E1 /* JsonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonInfo.swift; sourceTree = "<group>"; };
+		91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNetworkService.swift; sourceTree = "<group>"; };
+		91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
+		E6F85E4C0A66618869C8E75F /* Pods-AutosportInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutosportInfo.release.xcconfig"; path = "Target Support Files/Pods-AutosportInfo/Pods-AutosportInfo.release.xcconfig"; sourceTree = "<group>"; };
+		FEBAF6C7CF1B6756F0B673D3 /* Pods-AutosportInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutosportInfo.debug.xcconfig"; path = "Target Support Files/Pods-AutosportInfo/Pods-AutosportInfo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +97,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D756FB1F67691836946ACC /* Pods_AutosportInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7DD509F69390B96E2F765C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEBAF6C7CF1B6756F0B673D3 /* Pods-AutosportInfo.debug.xcconfig */,
+				E6F85E4C0A66618869C8E75F /* Pods-AutosportInfo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		682C3EA5A045189A0A4C2DDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79F970C8117597310FBF6DF6 /* Pods_AutosportInfo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9104F840250A746600BD797D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91EF053D250BFC4F007F12E1 /* JsonInfo.swift */,
+				911FB2A925126B2A00DEE772 /* TeamsModel.swift */,
+				911FB2B12517D66900DEE772 /* CircuitModel.swift */,
+				91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		911CDA98252333BC00EB79D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				911CDAA1252337F600EB79D9 /* UIFont.swift */,
+				911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */,
+				911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */,
+				911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */,
+				911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		911FB2A2251105E000DEE772 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				911FB29F2510FAA500DEE772 /* NetworkService.swift */,
+				911FB2AB25126E2100DEE772 /* TeamsNetworkService.swift */,
+				9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */,
+				91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		912E91DB250A2E9C0078AACB = {
 			isa = PBXGroup;
 			children = (
 				912E91E6250A2E9C0078AACB /* AutosportInfo */,
 				912E91E5250A2E9C0078AACB /* Products */,
+				0F7DD509F69390B96E2F765C /* Pods */,
+				682C3EA5A045189A0A4C2DDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,11 +180,23 @@
 				912E91E9250A2E9C0078AACB /* SceneDelegate.swift */,
 				912E91EB250A2E9C0078AACB /* FirstViewController.swift */,
 				912E91ED250A2E9C0078AACB /* SecondViewController.swift */,
+				911FB2A3251240A600DEE772 /* FirstTableViewController.swift */,
+				911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */,
+				9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */,
+				912E9200250A2FE30078AACB /* DriversViewController.swift */,
+				911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */,
+				911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */,
+				918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */,
+				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
+				91DC86C7251F892A00A673F2 /* TeamColors.swift */,
 				912E91EF250A2E9C0078AACB /* Main.storyboard */,
 				912E91F5250A2E9E0078AACB /* Assets.xcassets */,
 				912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */,
 				912E91FA250A2E9E0078AACB /* Info.plist */,
 				912E91F2250A2E9C0078AACB /* AutosportInfo.xcdatamodeld */,
+				9104F840250A746600BD797D /* Models */,
+				911FB2A2251105E000DEE772 /* Networking */,
+				911CDA98252333BC00EB79D9 /* Fonts */,
 			);
 			path = AutosportInfo;
 			sourceTree = "<group>";
@@ -80,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 912E91FD250A2E9E0078AACB /* Build configuration list for PBXNativeTarget "AutosportInfo" */;
 			buildPhases = (
+				F4E6636E9606B8E003242F8F /* [CP] Check Pods Manifest.lock */,
 				912E91E0250A2E9C0078AACB /* Sources */,
 				912E91E1250A2E9C0078AACB /* Frameworks */,
 				912E91E2250A2E9C0078AACB /* Resources */,
+				0021680CA35E436AD1C0FF3F /* [CP] Embed Pods Frameworks */,
+				91DC86C6251E3D0000A673F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,12 +240,13 @@
 				};
 			};
 			buildConfigurationList = 912E91DF250A2E9C0078AACB /* Build configuration list for PBXProject "AutosportInfo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 912E91DB250A2E9C0078AACB;
 			productRefGroup = 912E91E5250A2E9C0078AACB /* Products */;
@@ -132,23 +264,87 @@
 			buildActionMask = 2147483647;
 			files = (
 				912E91F9250A2E9E0078AACB /* LaunchScreen.storyboard in Resources */,
+				911CDAA0252333BC00EB79D9 /* Formula1-Regular.ttf in Resources */,
+				911CDA9F252333BC00EB79D9 /* Formula1-Black.ttf in Resources */,
 				912E91F6250A2E9E0078AACB /* Assets.xcassets in Resources */,
+				911CDA9D252333BC00EB79D9 /* Formula1-Bold.ttf in Resources */,
 				912E91F1250A2E9C0078AACB /* Main.storyboard in Resources */,
+				911CDA9E252333BC00EB79D9 /* Formula1-Wide.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0021680CA35E436AD1C0FF3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutosportInfo/Pods-AutosportInfo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutosportInfo/Pods-AutosportInfo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutosportInfo/Pods-AutosportInfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4E6636E9606B8E003242F8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutosportInfo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		912E91E0250A2E9C0078AACB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911FB2AE2512886B00DEE772 /* DetailTeamInfoViewController.swift in Sources */,
+				91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */,
+				911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */,
+				918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */,
 				912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */,
 				912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */,
+				911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */,
+				91DC86C8251F892A00A673F2 /* TeamColors.swift in Sources */,
+				911FB2AA25126B2A00DEE772 /* TeamsModel.swift in Sources */,
+				911FB2AC25126E2100DEE772 /* TeamsNetworkService.swift in Sources */,
+				911FB2A4251240A600DEE772 /* FirstTableViewController.swift in Sources */,
+				9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */,
+				912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */,
 				912E91E8250A2E9C0078AACB /* AppDelegate.swift in Sources */,
+				91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */,
+				911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */,
+				9126C72B252B260A00ED0D5D /* TeamsTableViewCell.swift in Sources */,
 				912E91F4250A2E9C0078AACB /* AutosportInfo.xcdatamodeld in Sources */,
+				911FB2A625125C2200DEE772 /* DetailDriverInfoViewController.swift in Sources */,
 				912E91EA250A2E9C0078AACB /* SceneDelegate.swift in Sources */,
+				91FC3FB6251A1387003FBF97 /* ResultsNetworkService.swift in Sources */,
+				911FB2A8251266CD00DEE772 /* SecondTableViewController.swift in Sources */,
+				91EF053E250BFC4F007F12E1 /* JsonInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +355,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				912E91F0250A2E9C0078AACB /* Base */,
+				91A363BF2519309300B739D8 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -178,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -238,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -290,15 +489,18 @@
 		};
 		912E91FE250A2E9E0078AACB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBAF6C7CF1B6756F0B673D3 /* Pods-AutosportInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JDTGRU72Z;
 				INFOPLIST_FILE = AutosportInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo2222;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,15 +509,18 @@
 		};
 		912E91FF250A2E9E0078AACB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F85E4C0A66618869C8E75F /* Pods-AutosportInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JDTGRU72Z;
 				INFOPLIST_FILE = AutosportInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo2222;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

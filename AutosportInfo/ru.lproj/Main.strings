@@ -1,0 +1,33 @@
+
+/* Class = "UITabBarItem"; title = "Drivers"; ObjectID = "6pe-AW-MxL"; */
+"6pe-AW-MxL.title" = "Пилоты";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "7eH-Wp-mzf"; */
+"7eH-Wp-mzf.text" = "Заголовок";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "AXN-RB-MgX"; */
+"AXN-RB-MgX.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "DMQ-7a-smh"; */
+"DMQ-7a-smh.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "RBt-fu-w7Z"; */
+"RBt-fu-w7Z.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Teams"; ObjectID = "TZY-5M-SBf"; */
+"TZY-5M-SBf.title" = "Команды";
+
+/* Class = "UINavigationItem"; title = "Teams"; ObjectID = "alq-CG-QFq"; */
+"alq-CG-QFq.title" = "Команды";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "e4P-tv-Fos"; */
+"e4P-tv-Fos.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "lfh-fV-76u"; */
+"lfh-fV-76u.title" = "Root View Controller";
+
+/* Class = "UINavigationItem"; title = "Drivers"; ObjectID = "qFd-bO-BGE"; */
+"qFd-bO-BGE.title" = "Пилоты";
+
+/* Class = "UINavigationItem"; title = " "; ObjectID = "rag-zq-EEt"; */
+"rag-zq-EEt.title" = " ";
