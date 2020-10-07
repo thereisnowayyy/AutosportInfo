@@ -73,6 +73,17 @@ class SecondTableViewController: UITableViewController {
     
     
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+             cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+             
+         
+     UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations:
+             {
+                 cell.transform = CGAffineTransform.identity
+                 
+             },
+                 completion: nil)
+     }
     
     
     override  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

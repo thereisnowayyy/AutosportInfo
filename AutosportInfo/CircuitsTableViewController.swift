@@ -21,14 +21,19 @@ class CircuitsTableViewController: UITableViewController {
                 switch result {
                 case .success(let circuits):
                     self.circuitJsonData = circuits
-                    self.table.reloadData()
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                        self.table.reloadData()
+                    }, completion: nil)
                 case .failure(let error):
                     print(error)
                 }
             }
         }
 
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        refreshControl?.isHidden = true
+        refreshControl?.endRefreshing()
+    }
     
     
     
@@ -66,7 +71,17 @@ class CircuitsTableViewController: UITableViewController {
     }
         
     
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+             cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+             
+         
+     UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations:
+             {
+                 cell.transform = CGAffineTransform.identity
+                 
+             },
+                 completion: nil)
+     }
     
     
     

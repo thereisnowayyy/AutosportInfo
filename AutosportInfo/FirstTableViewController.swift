@@ -37,8 +37,8 @@ class FirstTableViewController: UITableViewController {
             let urlString = "https://ergast.com/api/f1/2020/DriverStandings.json"
                networkService.request(urlString: urlString) { (result) in
                     switch result {
-                    case .success(let teams):
-                        self.jsonInfo = teams
+                    case .success(let drivers):
+                        self.jsonInfo = drivers
                         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                             self.table.reloadData()
                         }, completion: nil)
