@@ -35,7 +35,10 @@ class SecondTableViewController: UITableViewController {
         }
         }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        refreshControl?.isHidden = true
+        refreshControl?.endRefreshing()
+    }
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshControl!.isRefreshing {
             let urlString = "https://ergast.com/api/f1/2020/ConstructorStandings.json"

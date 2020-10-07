@@ -21,6 +21,7 @@ class FirstTableViewController: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        refreshControl?.isHidden = true
         refreshControl?.endRefreshing()
     }
     
