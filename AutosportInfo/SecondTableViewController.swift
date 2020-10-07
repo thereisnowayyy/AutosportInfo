@@ -50,6 +50,10 @@ class SecondTableViewController: UITableViewController {
         let text2 = "\(teams!.constructor.name)"
         cell.cellView.layer.cornerRadius = 15
         cell.teamName.text = text2
+        cell.teamNationalityLabel.text = teams?.constructor.nationality
+        cell.countWins.text = teams?.wins
+        cell.countPosition.text = teams?.position
+        cell.countPoints.text = teams?.points
     tableView.tableFooterView = UIView()
     return cell
         }
