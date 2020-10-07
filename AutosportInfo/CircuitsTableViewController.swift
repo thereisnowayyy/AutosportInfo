@@ -10,10 +10,13 @@ import UIKit
 
 class CircuitsTableViewController: UITableViewController {
     let circuitNetworkService = CircuitsNetworkService()
+    var circuitJsonData: CircuitStart?
+    
+    
     @IBOutlet weak var table: UITableView!
-    var circuitJsonData: CircuitStart? 
-    var imageView: UIImageView!
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let urlString = "https://ergast.com/api/f1/2020/Circuits/.json"
@@ -25,10 +28,15 @@ class CircuitsTableViewController: UITableViewController {
                         self.table.reloadData()
                     }, completion: nil)
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(action)
+                        self.present(alert, animated: true, completion: nil)
                 }
             }
         }
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         refreshControl?.isHidden = true
@@ -86,7 +94,9 @@ class CircuitsTableViewController: UITableViewController {
     
     
     
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     
     // MARK: - Table view data source
 
@@ -95,9 +105,10 @@ class CircuitsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let cellText = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].circuitName
-        cell.textLabel?.text = cellText
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CircuitTableViewCell
+        let circuitName = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].circuitName
+        
+        cell.circuitNameLabel.text = circuitName
         tableView.tableFooterView = UIView()
         let imageBahrain = UIImage(named: "bahrain")
         let imageSpain = UIImage(named: "spain")
@@ -111,32 +122,32 @@ class CircuitsTableViewController: UITableViewController {
         let imageRus = UIImage(named: "rus")
         let imageBelgium = UIImage(named: "belgium")
         let imageUAE = UIImage(named: "uae")
-        let nat = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].location.country ?? ""
-        switch nat {
+        let country = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].location.country ?? ""
+        switch country {
         case "Bahrain":
-            cell.imageView?.image = imageBahrain
+            cell.circuitCountryImage.image = imageBahrain
         case "Spain":
-            cell.imageView?.image = imageSpain
+            cell.circuitCountryImage.image = imageSpain
         case "Hungary":
-            cell.imageView?.image = imageHungary
+            cell.circuitCountryImage.image = imageHungary
         case "Italy":
-            cell.imageView?.image = imageItaly
+            cell.circuitCountryImage.image = imageItaly
         case "Turkey":
-            cell.imageView?.image = imageTurkey
+            cell.circuitCountryImage.image = imageTurkey
         case "Germany":
-            cell.imageView?.image = imageGermany
+            cell.circuitCountryImage.image = imageGermany
         case "Portugal":
-            cell.imageView?.image = imagePortugal
+            cell.circuitCountryImage.image = imagePortugal
         case "Austria":
-            cell.imageView?.image = imageAustria
+            cell.circuitCountryImage.image = imageAustria
         case "UK":
-            cell.imageView?.image = imageUK
+            cell.circuitCountryImage.image = imageUK
         case "Russia":
-            cell.imageView?.image = imageRus
+            cell.circuitCountryImage.image = imageRus
         case "Belgium":
-            cell.imageView?.image = imageBelgium
+            cell.circuitCountryImage.image = imageBelgium
         case "UAE":
-            cell.imageView?.image = imageUAE
+            cell.circuitCountryImage.image = imageUAE
         default:
             break
         }

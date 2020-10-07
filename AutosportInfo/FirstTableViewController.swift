@@ -45,6 +45,7 @@ class FirstTableViewController: UITableViewController {
                     case .failure(let error):
                         let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(action)
                         self.present(alert, animated: true, completion: nil)
                     }
             }
@@ -70,7 +71,6 @@ class FirstTableViewController: UITableViewController {
                             alert.addAction(action)
                             self.present(alert, animated: true, completion: nil)
                         refreshControl?.endRefreshing()
-                        print(error)
         }
                     }
             }
@@ -111,7 +111,7 @@ class FirstTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }    
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailDriverInfo" {

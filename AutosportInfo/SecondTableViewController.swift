@@ -28,13 +28,20 @@ class SecondTableViewController: UITableViewController {
                 switch result {
                 case .success(let teams):
                     self.teamJsonInfo = teams
-                    self.table.reloadData()
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                        self.table.reloadData()
+                    }, completion: nil)
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(action)
+                        self.present(alert, animated: true, completion: nil)
+                        print(error)
                 }
         }
         }
-    
+    }
     override func viewWillDisappear(_ animated: Bool) {
         refreshControl?.isHidden = true
         refreshControl?.endRefreshing()

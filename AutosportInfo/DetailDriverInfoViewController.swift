@@ -105,9 +105,6 @@ class DetailDriverInfoViewController: UIViewController {
         imageDownloader()
         
         
-
-        
-        
         driverImage.alpha = 0.0
         UIView.animate(withDuration: 2.0,
             animations: { [weak self] in
@@ -123,7 +120,6 @@ class DetailDriverInfoViewController: UIViewController {
     func downloadImage(from url: URL) {
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
             DispatchQueue.main.async() {
                 self.driverImage.image = UIImage(data: data)
             }

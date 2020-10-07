@@ -2,13 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Formula1-Black.ttf">
+            <string>Formula1-Display-Black</string>
+        </array>
         <array key="Formula1-Bold.ttf">
             <string>Formula1-Display-Bold</string>
         </array>
@@ -262,16 +264,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="H5M-88-jPr">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" id="H5M-88-jPr" customClass="CircuitTableViewCell" customModule="AutosportInfo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5M-88-jPr" id="npn-Dv-ksM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1St-OF-Boc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vnj-3F-ZgT">
+                                                    <rect key="frame" x="8" y="8" width="79.666666666666671" height="91"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-5n-CWA">
+                                                    <rect key="frame" x="95.666666666666657" y="8" width="310.33333333333337" height="91"/>
+                                                    <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="top" secondItem="1St-OF-Boc" secondAttribute="topMargin" id="2RN-SN-6vz"/>
+                                                <constraint firstItem="Vnj-3F-ZgT" firstAttribute="bottom" secondItem="1St-OF-Boc" secondAttribute="bottomMargin" id="84D-DH-i4H"/>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="bottom" secondItem="1St-OF-Boc" secondAttribute="bottomMargin" id="BXP-dd-ZpD"/>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="trailing" secondItem="1St-OF-Boc" secondAttribute="trailingMargin" id="R5J-wQ-FNT"/>
+                                                <constraint firstItem="Vnj-3F-ZgT" firstAttribute="top" secondItem="1St-OF-Boc" secondAttribute="topMargin" id="aCO-UF-rYY"/>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="centerY" secondItem="1St-OF-Boc" secondAttribute="centerY" id="icA-Td-wYU"/>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="leading" secondItem="Vnj-3F-ZgT" secondAttribute="trailing" constant="8" symbolic="YES" id="lqB-Cv-Xax"/>
+                                                <constraint firstItem="Vnj-3F-ZgT" firstAttribute="leading" secondItem="1St-OF-Boc" secondAttribute="leadingMargin" id="nQU-bm-61H"/>
+                                                <constraint firstItem="MWA-5n-CWA" firstAttribute="width" secondItem="1St-OF-Boc" secondAttribute="width" multiplier="3:4" id="pic-Eh-wVe"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="1St-OF-Boc" secondAttribute="trailing" id="5n5-gO-ibJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="1St-OF-Boc" secondAttribute="bottom" id="CsB-Hf-eJS"/>
+                                        <constraint firstItem="1St-OF-Boc" firstAttribute="leading" secondItem="npn-Dv-ksM" secondAttribute="leading" id="g4R-uf-Yay"/>
+                                        <constraint firstItem="1St-OF-Boc" firstAttribute="top" secondItem="npn-Dv-ksM" secondAttribute="top" id="rj5-fS-btU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="circuitCellView" destination="1St-OF-Boc" id="90r-af-X2O"/>
+                                    <outlet property="circuitCountryImage" destination="Vnj-3F-ZgT" id="k8h-l1-pb3"/>
+                                    <outlet property="circuitNameLabel" destination="MWA-5n-CWA" id="7IA-qB-GTy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -281,6 +322,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="lfh-fV-76u"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="E5o-o0-fAB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="refreshControl:" destination="q1a-Jk-vj9" eventType="valueChanged" id="Z0e-h8-lyf"/>
@@ -519,7 +561,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Championship Standing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-Gt-1ZV">
                                                         <rect key="frame" x="0.0" y="20" width="374" height="23"/>
-                                                        <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="23"/>
+                                                        <fontDescription key="fontDescription" name="Formula1-Display-Black" family="Formula1" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

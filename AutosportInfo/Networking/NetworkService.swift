@@ -16,9 +16,11 @@ class NetworkService {
          let queue = DispatchQueue.global(qos: .userInteractive)
             queue.async {
                  if let error = error {
+                    DispatchQueue.main.async {
                      completion(.failure(error))
                      return
              }
+                 }
                  guard let data = data else {return}
                  do {
                      let driverInfo = try JSONDecoder().decode(Welcome.self, from: data)

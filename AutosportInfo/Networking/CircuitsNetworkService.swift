@@ -12,12 +12,16 @@ class CircuitsNetworkService {
     func request(urlString: String, completion: @escaping (Result<CircuitStart?, Error>) -> Void) {
         guard let url = URL(string: urlString) else {return}
         let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 5.0)
+        
          URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
-             DispatchQueue.main.async {
+            let queue = DispatchQueue.global(qos: .userInteractive)
+            queue.async {
                  if let error = error {
+                    DispatchQueue.main.async {
                      completion(.failure(error))
                      return
              }
+                 }
                  guard let data = data else {return}
                  do {
                     
