@@ -1,3 +1,0 @@
-//
-//  CollectionViewCell.swift
-
