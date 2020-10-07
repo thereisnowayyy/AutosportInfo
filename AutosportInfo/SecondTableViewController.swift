@@ -51,9 +51,15 @@ class SecondTableViewController: UITableViewController {
                                             self.table.reloadData()
                         }, completion: nil)
                     case .failure(let error):
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "OK", style: .default, handler: .none)
+                            alert.addAction(action)
+                            self.present(alert, animated: true, completion: nil)
                         refreshControl?.endRefreshing()
                         print(error)
         }
+            }
             }
         }
     }

@@ -11,12 +11,11 @@ import Foundation
 class NetworkService {
     func request(urlString: String, completion: @escaping (Result<Welcome?, Error>) -> Void) {
          guard let url = URL(string: urlString) else {return}
-        let urlReq = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 5.0)
+         let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 5.0)
          URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
          let queue = DispatchQueue.global(qos: .userInteractive)
             queue.async {
                  if let error = error {
-                     print("error")
                      completion(.failure(error))
                      return
              }
