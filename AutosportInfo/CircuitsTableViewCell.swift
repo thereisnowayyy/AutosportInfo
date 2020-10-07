@@ -13,6 +13,6 @@ class CircuitTableViewCell: UITableViewCell {
     @IBOutlet weak var circuitCellView: UIView!
     @IBOutlet weak var circuitNameLabel: UILabel!
     @IBOutlet weak var circuitCountryImage: UIImageView!
-    
+    // Testing comment 
 
 }
