@@ -1,0 +1,20 @@
+PODS:
+  - DateToolsSwift (5.0.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - DateToolsSwift
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - DateToolsSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 0ec18cf3eb5dde95a29df66fb376c2249ad44d04
+
+COCOAPODS: 1.9.3

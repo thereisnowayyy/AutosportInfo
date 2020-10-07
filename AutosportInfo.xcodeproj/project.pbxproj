@@ -30,6 +30,7 @@
 		912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9200250A2FE30078AACB /* DriversViewController.swift */; };
 		914E4BBE252E73510013D144 /* CircuitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */; };
 		9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */; };
+		91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */; };
 		918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */; };
 		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
 		91EF053E250BFC4F007F12E1 /* JsonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF053D250BFC4F007F12E1 /* JsonInfo.swift */; };
@@ -79,6 +80,7 @@
 		912E9200250A2FE30078AACB /* DriversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversViewController.swift; sourceTree = "<group>"; };
 		914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewCell.swift; sourceTree = "<group>"; };
 		9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsNetworkService.swift; sourceTree = "<group>"; };
+		91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		91EF053D250BFC4F007F12E1 /* JsonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonInfo.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				9104F840250A746600BD797D /* Models */,
 				911FB2A2251105E000DEE772 /* Networking */,
 				911CDA98252333BC00EB79D9 /* Fonts */,
+				91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */,
 			);
 			path = AutosportInfo;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */,
 				911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */,
 				918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */,
+				91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */,
 				912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */,
 				912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */,
 				911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */,
@@ -415,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -471,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -486,6 +490,7 @@
 			baseConfigurationReference = FEBAF6C7CF1B6756F0B673D3 /* Pods-AutosportInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JDTGRU72Z;
 				INFOPLIST_FILE = AutosportInfo/Info.plist;
@@ -494,8 +499,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo2222;
+				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfoV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -506,6 +512,7 @@
 			baseConfigurationReference = E6F85E4C0A66618869C8E75F /* Pods-AutosportInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JDTGRU72Z;
 				INFOPLIST_FILE = AutosportInfo/Info.plist;
@@ -514,8 +521,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfo2222;
+				PRODUCT_BUNDLE_IDENTIFIER = iminfinite.AutosportInfoV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 912E91DC250A2E9C0078AACB /* Project object */;
 }
