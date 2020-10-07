@@ -16,7 +16,7 @@ class SecondTableViewController: UITableViewController {
     @IBOutlet weak var table: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.barTintColor = .none
     }
     
     
@@ -48,10 +48,6 @@ class SecondTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TeamsTableViewCell
         let teams = self.teamJsonInfo?.mrDataTeams.standingsTable.standingsLists[Int()].constructorStandings[indexPath.row]
         let text2 = "\(teams!.constructor.name)"
-       /* viewForInfo.layer.cornerRadius = 15
-        viewForInfo.layer.borderColor =
-            UIColor.black.cgColor
-        viewForInfo.layer.borderWidth = 3 */
         cell.cellView.layer.cornerRadius = 15
         cell.teamName.text = text2
     tableView.tableFooterView = UIView()

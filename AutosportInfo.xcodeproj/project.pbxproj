@@ -19,7 +19,6 @@
 		911FB2A8251266CD00DEE772 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */; };
 		911FB2AA25126B2A00DEE772 /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A925126B2A00DEE772 /* TeamsModel.swift */; };
 		911FB2AC25126E2100DEE772 /* TeamsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2AB25126E2100DEE772 /* TeamsNetworkService.swift */; };
-		911FB2AE2512886B00DEE772 /* DetailTeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */; };
 		911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2B12517D66900DEE772 /* CircuitModel.swift */; };
 		9126C72B252B260A00ED0D5D /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */; };
 		912E91E8250A2E9C0078AACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91E7250A2E9C0078AACB /* AppDelegate.swift */; };
@@ -27,14 +26,12 @@
 		912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91EB250A2E9C0078AACB /* FirstViewController.swift */; };
 		912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E91ED250A2E9C0078AACB /* SecondViewController.swift */; };
 		912E91F1250A2E9C0078AACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912E91EF250A2E9C0078AACB /* Main.storyboard */; };
-		912E91F4250A2E9C0078AACB /* AutosportInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912E91F2250A2E9C0078AACB /* AutosportInfo.xcdatamodeld */; };
 		912E91F6250A2E9E0078AACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912E91F5250A2E9E0078AACB /* Assets.xcassets */; };
 		912E91F9250A2E9E0078AACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */; };
 		912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9200250A2FE30078AACB /* DriversViewController.swift */; };
 		9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */; };
 		918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */; };
 		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
-		91DC86C8251F892A00A673F2 /* TeamColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC86C7251F892A00A673F2 /* TeamColors.swift */; };
 		91EF053E250BFC4F007F12E1 /* JsonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF053D250BFC4F007F12E1 /* JsonInfo.swift */; };
 		91FC3FB6251A1387003FBF97 /* ResultsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */; };
 		91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */; };
@@ -66,7 +63,6 @@
 		911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		911FB2A925126B2A00DEE772 /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
 		911FB2AB25126E2100DEE772 /* TeamsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkService.swift; sourceTree = "<group>"; };
-		911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamInfoViewController.swift; sourceTree = "<group>"; };
 		911FB2B12517D66900DEE772 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
 		9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		912E91E4250A2E9C0078AACB /* AutosportInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutosportInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +71,6 @@
 		912E91EB250A2E9C0078AACB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		912E91ED250A2E9C0078AACB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		912E91F0250A2E9C0078AACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		912E91F3250A2E9C0078AACB /* AutosportInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutosportInfo.xcdatamodel; sourceTree = "<group>"; };
 		912E91F5250A2E9E0078AACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912E91F8250A2E9E0078AACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912E91FA250A2E9E0078AACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +79,6 @@
 		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		91A363BF2519309300B739D8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		91DC86C7251F892A00A673F2 /* TeamColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamColors.swift; sourceTree = "<group>"; };
 		91EF053D250BFC4F007F12E1 /* JsonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonInfo.swift; sourceTree = "<group>"; };
 		91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNetworkService.swift; sourceTree = "<group>"; };
 		91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
@@ -185,15 +179,12 @@
 				9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */,
 				912E9200250A2FE30078AACB /* DriversViewController.swift */,
 				911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */,
-				911FB2AD2512886B00DEE772 /* DetailTeamInfoViewController.swift */,
 				918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */,
 				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
-				91DC86C7251F892A00A673F2 /* TeamColors.swift */,
 				912E91EF250A2E9C0078AACB /* Main.storyboard */,
 				912E91F5250A2E9E0078AACB /* Assets.xcassets */,
 				912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */,
 				912E91FA250A2E9E0078AACB /* Info.plist */,
-				912E91F2250A2E9C0078AACB /* AutosportInfo.xcdatamodeld */,
 				9104F840250A746600BD797D /* Models */,
 				911FB2A2251105E000DEE772 /* Networking */,
 				911CDA98252333BC00EB79D9 /* Fonts */,
@@ -322,14 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911FB2AE2512886B00DEE772 /* DetailTeamInfoViewController.swift in Sources */,
 				91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */,
 				911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */,
 				918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */,
 				912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */,
 				912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */,
 				911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */,
-				91DC86C8251F892A00A673F2 /* TeamColors.swift in Sources */,
 				911FB2AA25126B2A00DEE772 /* TeamsModel.swift in Sources */,
 				911FB2AC25126E2100DEE772 /* TeamsNetworkService.swift in Sources */,
 				911FB2A4251240A600DEE772 /* FirstTableViewController.swift in Sources */,
@@ -339,7 +328,6 @@
 				91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */,
 				911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */,
 				9126C72B252B260A00ED0D5D /* TeamsTableViewCell.swift in Sources */,
-				912E91F4250A2E9C0078AACB /* AutosportInfo.xcdatamodeld in Sources */,
 				911FB2A625125C2200DEE772 /* DetailDriverInfoViewController.swift in Sources */,
 				912E91EA250A2E9C0078AACB /* SceneDelegate.swift in Sources */,
 				91FC3FB6251A1387003FBF97 /* ResultsNetworkService.swift in Sources */,
@@ -549,19 +537,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		912E91F2250A2E9C0078AACB /* AutosportInfo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				912E91F3250A2E9C0078AACB /* AutosportInfo.xcdatamodel */,
-			);
-			currentVersion = 912E91F3250A2E9C0078AACB /* AutosportInfo.xcdatamodel */;
-			path = AutosportInfo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 912E91DC250A2E9C0078AACB /* Project object */;
 }

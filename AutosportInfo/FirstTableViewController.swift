@@ -20,6 +20,9 @@ class FirstTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barTintColor = .white
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.refreshControl?.endRefreshing()
+    }
     
     
     
@@ -40,7 +43,7 @@ class FirstTableViewController: UITableViewController {
     }
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshControl!.isRefreshing {
-            let urlString = "https://ergast.com/api/f1/2019/DriverStandings.json"
+            let urlString = "https://ergast.com/api/f1/2020/DriverStandings.json"
             networkService.request(urlString: urlString) { [self] (result) in
                     switch result {
                     case .success(let teams):
