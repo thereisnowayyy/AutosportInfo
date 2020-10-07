@@ -14,12 +14,14 @@ class TeamNetworkService {
         guard let url = URL(string: urlString) else {return}
         let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 5.0)
          URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
-             let queue = DispatchQueue.global(qos: .utility)
+             let queue = DispatchQueue.global(qos: .userInteractive)
                      queue.async {
                           if let error = error {
+                            DispatchQueue.main.async {
                               completion(.failure(error))
                               return
                       }
+                          }
                           guard let data = data else {return}
                           do {
                               let driverInfo = try JSONDecoder().decode(Teams.self, from: data)

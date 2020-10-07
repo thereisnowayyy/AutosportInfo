@@ -27,16 +27,17 @@ class SecondTableViewController: UITableViewController {
             teamNetworkService.request(urlString: urlString) { (result) in
                 switch result {
                 case .success(let teams):
+                    self.teamJsonInfo = teams
                     UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                         self.table.reloadData()
                     }, completion: nil)
-                    self.teamJsonInfo = teams
                 case .failure(let error):
                     DispatchQueue.main.async {
                         let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alert.addAction(action)
                         self.present(alert, animated: true, completion: nil)
+                        print(error)
                 }
         }
         }

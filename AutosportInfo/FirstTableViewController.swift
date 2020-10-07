@@ -45,6 +45,7 @@ class FirstTableViewController: UITableViewController {
                     case .failure(let error):
                         let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(action)
                         self.present(alert, animated: true, completion: nil)
                     }
             }
@@ -70,7 +71,6 @@ class FirstTableViewController: UITableViewController {
                             alert.addAction(action)
                             self.present(alert, animated: true, completion: nil)
                         refreshControl?.endRefreshing()
-                        print(error)
         }
                     }
             }

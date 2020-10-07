@@ -25,10 +25,15 @@ class CircuitsTableViewController: UITableViewController {
                         self.table.reloadData()
                     }, completion: nil)
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(action)
+                        self.present(alert, animated: true, completion: nil)
                 }
             }
         }
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         refreshControl?.isHidden = true
