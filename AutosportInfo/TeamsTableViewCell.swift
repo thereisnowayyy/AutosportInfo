@@ -15,7 +15,7 @@ class TeamsTableViewCell: UITableViewCell {
     @IBOutlet weak var countWins: UILabel!
     @IBOutlet weak var countPoints: UILabel!
     @IBOutlet weak var countPosition: UILabel!
-    
+    // just checking comment 
     
 }
 
