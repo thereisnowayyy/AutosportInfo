@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		79F970C8117597310FBF6DF6 /* Pods_AutosportInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutosportInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91068085252DDC1D0010FE75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold.ttf"; sourceTree = "<group>"; };
 		911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
 		911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Black.ttf"; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsNetworkService.swift; sourceTree = "<group>"; };
 		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
-		91A363BF2519309300B739D8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		91EF053D250BFC4F007F12E1 /* JsonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonInfo.swift; sourceTree = "<group>"; };
 		91FC3FB5251A1387003FBF97 /* ResultsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsNetworkService.swift; sourceTree = "<group>"; };
 		91FC3FB7251A13CE003FBF97 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				912E91F0250A2E9C0078AACB /* Base */,
-				91A363BF2519309300B739D8 /* ru */,
+				91068085252DDC1D0010FE75 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

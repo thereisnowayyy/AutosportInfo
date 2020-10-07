@@ -14,6 +14,11 @@ class FirstTableViewController: UITableViewController {
     var jsonInfo: Welcome? = nil
 
     
+ /*  @IBAction func backToTable(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    } */
+    
+    
     @IBOutlet weak var table: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,6 +107,11 @@ class FirstTableViewController: UITableViewController {
         cell.detailTextLabel?.text = driver?.constructors[Int()].name
         return cell
             }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailDriverInfo" {
