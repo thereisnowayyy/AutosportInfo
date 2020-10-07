@@ -85,7 +85,7 @@ class SecondTableViewController: UITableViewController {
     }
     
     
-    override   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TeamsTableViewCell
         let teams = self.teamJsonInfo?.mrDataTeams.standingsTable.standingsLists[Int()].constructorStandings[indexPath.row]
         let text2 = "\(teams!.constructor.name)"

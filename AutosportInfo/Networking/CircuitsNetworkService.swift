@@ -10,18 +10,21 @@ import Foundation
 
 class CircuitsNetworkService {
     func request(urlString: String, completion: @escaping (Result<CircuitStart?, Error>) -> Void) {
-         guard let url = URL(string: urlString) else {return}
-         URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let url = URL(string: urlString) else {return}
+        let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 5.0)
+         URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
              DispatchQueue.main.async {
                  if let error = error {
-                     print("error")
                      completion(.failure(error))
                      return
              }
                  guard let data = data else {return}
                  do {
+                    
                      let circuitInfo = try JSONDecoder().decode(CircuitStart.self, from: data)
+                     DispatchQueue.main.async {
                      completion(.success(circuitInfo))
+                 }
                  }
                  catch let jsonError {
                      print("Failed to decode JSON", jsonError)

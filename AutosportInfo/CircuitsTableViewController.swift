@@ -11,7 +11,7 @@ import UIKit
 class CircuitsTableViewController: UITableViewController {
     let circuitNetworkService = CircuitsNetworkService()
     @IBOutlet weak var table: UITableView!
-    var circuitJsonData: CircuitStart? = nil
+    var circuitJsonData: CircuitStart? 
     var imageView: UIImageView!
 
     override func viewDidLoad() {
@@ -25,9 +25,54 @@ class CircuitsTableViewController: UITableViewController {
                 case .failure(let error):
                     print(error)
                 }
-        }
+            }
         }
 
+    
+    
+    
+    
+    @IBAction func refreshControl(_ sender: UIRefreshControl) {
+        refreshControl?.beginRefreshing()
+    }
+    
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshControl!.isRefreshing {
+            let urlString = "https://ergast.com/api/f1/2020/Circuits/.json"
+            circuitNetworkService.request(urlString: urlString) { [self] (result) in
+                    switch result {
+                    case .success(let circuits):
+                        refreshControl?.endRefreshing()
+                        UIView.transition(with: self.table,
+                                          duration: 0.8,
+                                          options: [.curveEaseInOut],
+                                          animations: {
+                                            self.circuitJsonData = circuits
+                                            self.table.reloadData()
+                        }, completion: nil)
+                    case .failure(let error):
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Network Error", message: "Вероятно, потеряно соединение с интернетом", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            alert.addAction(action)
+                            self.present(alert, animated: true, completion: nil)
+                        refreshControl?.endRefreshing()
+                        print(error)
+                        }
+                    }
+            }
+        }
+    }
+        
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,5 +127,4 @@ class CircuitsTableViewController: UITableViewController {
         }
         return cell
     }
-
 }

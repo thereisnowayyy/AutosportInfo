@@ -28,8 +28,6 @@ class DetailDriverInfoViewController: UIViewController {
     @IBOutlet weak var driverTeam: UILabel!
     @IBOutlet weak var driverNumber: UILabel!
     @IBOutlet weak var driverAge: UILabel!
-    @IBOutlet weak var ageOfDriverLabel: UILabel!
-    @IBOutlet weak var driverPointsLabel: UILabel!
     @IBOutlet weak var entryView: UIView!
     @IBOutlet weak var viewForAge: UIView!
     @IBOutlet weak var viewForPoints: UIView!
@@ -131,18 +129,6 @@ class DetailDriverInfoViewController: UIViewController {
             }
         }
     }
-    
-    /*  func driverCountry() {
-        switch driverNationality {
-        case "British":
-            driversCountryImage.image = UIImage(named: "uk")
-        case "Finnish":
-            driversCountryImage.image = UIImage(named: "finland")
-        default:
-            break
-        }
-    } */
-
     
     
         func imageDownloader() {
