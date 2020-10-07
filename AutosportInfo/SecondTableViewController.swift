@@ -23,7 +23,7 @@ class SecondTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         table.separatorStyle = .none
-        let urlString = "https://ergast.com/api/f1/2020/constructorStandings.json"
+        let urlString = "https://ergast.com/api/f1/2020/ConstructorStandings.json"
             teamNetworkService.request(urlString: urlString) { (result) in
                 switch result {
                 case .success(let teams):
@@ -34,6 +34,38 @@ class SecondTableViewController: UITableViewController {
                 }
         }
         }
+    
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshControl!.isRefreshing {
+            let urlString = "https://ergast.com/api/f1/2020/ConstructorStandings.json"
+            teamNetworkService.request(urlString: urlString) { [self] (result) in
+                    switch result {
+                    case .success(let teams):
+                        refreshControl?.endRefreshing()
+                        UIView.transition(with: self.table,
+                                          duration: 0.8,
+                                          options: [.curveEaseInOut],
+                                          animations: {
+                                            self.teamJsonInfo = teams
+                                            self.table.reloadData()
+                        }, completion: nil)
+                    case .failure(let error):
+                        refreshControl?.endRefreshing()
+                        print(error)
+        }
+            }
+        }
+    }
+    
+    @IBAction func refreshControl(_ sender: UIRefreshControl) {
+        refreshControl?.beginRefreshing()
+    }
+    
+    
+    
+    
+    
     override  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.teamJsonInfo?.mrDataTeams.standingsTable.standingsLists[Int()].constructorStandings.count ?? 0
     }

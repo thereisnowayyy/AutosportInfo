@@ -17,11 +17,11 @@ class FirstTableViewController: UITableViewController {
     @IBOutlet weak var table: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.barTintColor = .none
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.refreshControl?.endRefreshing()
+        refreshControl?.endRefreshing()
     }
     
     
@@ -56,6 +56,7 @@ class FirstTableViewController: UITableViewController {
                                             self.table.reloadData()
                         }, completion: nil)
                     case .failure(let error):
+                        refreshControl?.endRefreshing()
                         print(error)
         }
             }

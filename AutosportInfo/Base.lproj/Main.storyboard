@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="Xhr-SM-c5U" customClass="TeamsTableViewCell" customModule="AutosportInfo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="Xhr-SM-c5U" customClass="TeamsTableViewCell" customModule="AutosportInfo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xhr-SM-c5U" id="3IZ-Oo-sDq">
@@ -98,7 +98,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxy-KK-20V">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="190"/>
+                                            <rect key="frame" x="20" y="5" width="374" height="190"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-ZT-1cM">
                                                     <rect key="frame" x="0.0" y="8" width="374" height="22"/>
@@ -124,7 +124,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoI-Lw-zMI">
                                                             <rect key="frame" x="0.0" y="45" width="106.66666666666667" height="17"/>
                                                             <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -151,7 +151,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2Q-Zh-63w">
                                                             <rect key="frame" x="0.0" y="45" width="107" height="17"/>
                                                             <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -178,7 +178,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1N-dZ-x5f">
                                                             <rect key="frame" x="0.0" y="46" width="107" height="17"/>
                                                             <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -218,8 +218,8 @@
                                         <constraint firstItem="Mxy-KK-20V" firstAttribute="leading" secondItem="3IZ-Oo-sDq" secondAttribute="leadingMargin" id="2WM-Ck-cRs"/>
                                         <constraint firstItem="Mxy-KK-20V" firstAttribute="leading" secondItem="3IZ-Oo-sDq" secondAttribute="leadingMargin" id="Hdf-GY-Brn"/>
                                         <constraint firstItem="Mxy-KK-20V" firstAttribute="trailing" secondItem="3IZ-Oo-sDq" secondAttribute="trailingMargin" id="aHh-qf-Pha"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Mxy-KK-20V" secondAttribute="bottom" constant="-1" id="fDJ-8H-AYt"/>
-                                        <constraint firstItem="Mxy-KK-20V" firstAttribute="top" secondItem="3IZ-Oo-sDq" secondAttribute="topMargin" constant="-11" id="hQY-k3-1RM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Mxy-KK-20V" secondAttribute="bottom" constant="-6" id="fDJ-8H-AYt"/>
+                                        <constraint firstItem="Mxy-KK-20V" firstAttribute="top" secondItem="3IZ-Oo-sDq" secondAttribute="topMargin" constant="-6" id="hQY-k3-1RM"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -239,6 +239,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Teams" id="alq-CG-QFq"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="gWl-f0-Aw4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshControl:" destination="ILl-w6-5eu" eventType="valueChanged" id="ds0-e8-SKu"/>
+                        </connections>
+                    </refreshControl>
                     <connections>
                         <outlet property="table" destination="3xh-kb-dcS" id="vrB-gR-1Tu"/>
                     </connections>
@@ -773,6 +779,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
