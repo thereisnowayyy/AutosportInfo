@@ -11,7 +11,6 @@ import SafariServices
 
 class DetailDriverInfoViewController: UIViewController {
     
-    
     @IBAction func goToWiki(_ sender: Any) {
         let url = URL(string: driverUrlString)
         let safariVC = SFSafariViewController(url: url!)

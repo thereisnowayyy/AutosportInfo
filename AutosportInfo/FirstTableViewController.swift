@@ -12,7 +12,6 @@ import DateToolsSwift
 class FirstTableViewController: UITableViewController {
     let networkService = NetworkService()
     var jsonInfo: Welcome? = nil
-
     
  /*  @IBAction func backToTable(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -115,55 +114,44 @@ class FirstTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailDriverInfo" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let cell = self.tableView.cellForRow(at: indexPath)
-                guard var driverName = cell?.textLabel?.text else {return}
-                
+            if let indexPath = self.table.indexPathForSelectedRow {
+                let cell = self.table.cellForRow(at: indexPath)
                 
             let tableViewCell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: tableViewCell)!
-                let sizeVC = segue.destination as! DetailDriverInfoViewController
-                sizeVC.driverName = self.jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
-            let sys = segue.destination as! DetailDriverInfoViewController
-                let nationality = segue.destination as! DetailDriverInfoViewController
-                nationality.driverNationality = self.jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.nationality
-                var driverPermNumber = segue.destination as! DetailDriverInfoViewController
-                driverPermNumber.driverPermanentNumber = self.jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
+        
                 
-                var nameOfDriver = segue.destination as! DetailDriverInfoViewController
-                nameOfDriver.driverName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.givenName
                 
-                var lastNameOfDriver = segue.destination as! DetailDriverInfoViewController
-                lastNameOfDriver.driverLastName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.familyName
+                let dataTransfer = segue.destination as! DetailDriverInfoViewController
+                dataTransfer.driverNationality = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.nationality
                 
-                var driverTeam = segue.destination as! DetailDriverInfoViewController
-                driverTeam.teamOfDriver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].constructors[Int()].name
+                dataTransfer.driverPermanentNumber = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
                 
-                var codeOfDriver = segue.destination as! DetailDriverInfoViewController
-                codeOfDriver.driverCode = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.code
-   
+                dataTransfer.driverName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.givenName
+                
+                dataTransfer.driverLastName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.familyName
+                
+                dataTransfer.teamOfDriver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].constructors[Int()].name
+                
+                dataTransfer.driverCode = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.code
+                
                 guard let birthday = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.dateOfBirth else {return}
                 
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd"
-                let dateDriver = dateFormatter.date(from: birthday)
+                guard let dateDriver = dateFormatter.date(from: birthday) else {return}
 
-                let ageString = String((Date() as Date).years(from: dateDriver!))
-
-                var driverDateOfBirth = segue.destination as! DetailDriverInfoViewController
-                driverDateOfBirth.driverBirth = ageString
+                let ageString = String((Date() as Date).years(from: dateDriver))
                 
-                var pointsOfDriver = segue.destination as! DetailDriverInfoViewController
-                pointsOfDriver.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
+                dataTransfer.driverBirth = ageString
                 
-                var winsOfDriver = segue.destination as! DetailDriverInfoViewController
-                winsOfDriver.driverWins = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].wins
+                dataTransfer.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
                 
-                var driverUrlToWiki = segue.destination as! DetailDriverInfoViewController
-                driverUrlToWiki.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
+                dataTransfer.driverWins = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].wins
                 
-                var positionStanding = segue.destination as! DetailDriverInfoViewController
-                positionStanding.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
+                dataTransfer.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
+                
+                dataTransfer.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
                 
             }
         }
