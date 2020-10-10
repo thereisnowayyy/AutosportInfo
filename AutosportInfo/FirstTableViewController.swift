@@ -112,13 +112,23 @@ class FirstTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+     func instantiateViewController(withIdentifier identifier: String, sender: Any) -> UIViewController {
+       let identifier = "DetailDriverInfoViewController"
+        let tableViewCell = sender as! UITableViewCell
+        let indexPath = table.indexPath(for: tableViewCell)!
+        return DetailDriverInfoViewController()
+    }
+    
+    
+    
+ /*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailDriverInfo" {
-            if let indexPath = self.table.indexPathForSelectedRow {
-                let cell = self.table.cellForRow(at: indexPath)
+          //  if let indexPath = self.table.indexPathForSelectedRow {
+            //    let cell = self.table.cellForRow(at: indexPath)
                 
-            let tableViewCell = sender as! UITableViewCell
-            let indexPath = tableView.indexPath(for: tableViewCell)!
+                let tableViewCell = sender as! UITableViewCell
+                let indexPath = tableView.indexPath(for: tableViewCell)!
         
                 
                 
@@ -154,6 +164,5 @@ class FirstTableViewController: UITableViewController {
                 dataTransfer.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
                 
             }
-        }
-}
+        } */
 }
