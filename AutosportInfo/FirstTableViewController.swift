@@ -106,63 +106,42 @@ class FirstTableViewController: UITableViewController {
         cell.detailTextLabel?.text = driver?.constructors[Int()].name
         return cell
             }
-    
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    
-     func instantiateViewController(withIdentifier identifier: String, sender: Any) -> UIViewController {
-       let identifier = "DetailDriverInfoViewController"
-        let tableViewCell = sender as! UITableViewCell
-        let indexPath = table.indexPath(for: tableViewCell)!
-        return DetailDriverInfoViewController()
-    }
-    
-    
-    
- /*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailDriverInfo" {
-          //  if let indexPath = self.table.indexPathForSelectedRow {
-            //    let cell = self.table.cellForRow(at: indexPath)
-                
-                let tableViewCell = sender as! UITableViewCell
-                let indexPath = tableView.indexPath(for: tableViewCell)!
         
-                
-                
-                let dataTransfer = segue.destination as! DetailDriverInfoViewController
-                dataTransfer.driverNationality = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.nationality
-                
-                dataTransfer.driverPermanentNumber = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
-                
-                dataTransfer.driverName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.givenName
-                
-                dataTransfer.driverLastName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.familyName
-                
-                dataTransfer.teamOfDriver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].constructors[Int()].name
-                
-                dataTransfer.driverCode = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.code
-                
-                guard let birthday = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.dateOfBirth else {return}
-                
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
-                guard let dateDriver = dateFormatter.date(from: birthday) else {return}
-
-                let ageString = String((Date() as Date).years(from: dateDriver))
-                
-                dataTransfer.driverBirth = ageString
-                
-                dataTransfer.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
-                
-                dataTransfer.driverWins = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].wins
-                
-                dataTransfer.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
-                
-                dataTransfer.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
-                
-            }
-        } */
+        guard let detailDriverInfo = self.storyboard?.instantiateViewController(identifier: "DetailDriverInfoVC") as? DetailDriverInfoViewController else {return}
+        
+        detailDriverInfo.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
+        
+        detailDriverInfo.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
+        
+        detailDriverInfo.driverCode = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.code
+        
+        guard let driversBirthday = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.dateOfBirth else {return}
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let dateDriver = dateFormatter.date(from: driversBirthday) else {return}
+        
+        let ageString = String((Date() as Date).years(from: dateDriver))
+        
+        detailDriverInfo.driverBirth = ageString
+        
+        detailDriverInfo.driverWins = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].wins
+        
+        detailDriverInfo.driverLastName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.familyName
+        
+        detailDriverInfo.driverName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.givenName
+        
+        detailDriverInfo.driverNationality = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.nationality
+        
+        detailDriverInfo.teamOfDriver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].constructors[Int()].name
+        
+        detailDriverInfo.driverPermanentNumber = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
+        
+        detailDriverInfo.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
+        
+        navigationController?.pushViewController(detailDriverInfo, animated: true)
+}
 }
