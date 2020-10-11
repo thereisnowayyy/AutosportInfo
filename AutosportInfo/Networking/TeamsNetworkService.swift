@@ -24,9 +24,9 @@ class TeamNetworkService {
                           }
                           guard let data = data else {return}
                           do {
-                              let driverInfo = try JSONDecoder().decode(Teams.self, from: data)
+                              let teamsInfo = try JSONDecoder().decode(Teams.self, from: data)
                              DispatchQueue.main.async {
-                              completion(.success(driverInfo))
+                              completion(.success(teamsInfo))
 
                           }
                           }
