@@ -30,6 +30,8 @@
 		912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9200250A2FE30078AACB /* DriversViewController.swift */; };
 		914E4BBE252E73510013D144 /* CircuitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */; };
 		9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */; };
+		916A4FFC25330C7C00EC0FDA /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */; };
+		916A4FFE25336CC700EC0FDA /* DetailCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */; };
 		91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */; };
 		918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */; };
 		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
@@ -80,6 +82,8 @@
 		912E9200250A2FE30078AACB /* DriversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversViewController.swift; sourceTree = "<group>"; };
 		914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewCell.swift; sourceTree = "<group>"; };
 		9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsNetworkService.swift; sourceTree = "<group>"; };
+		916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
+		916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCircuitViewController.swift; sourceTree = "<group>"; };
 		91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -179,12 +183,14 @@
 				912E91EB250A2E9C0078AACB /* FirstViewController.swift */,
 				912E91ED250A2E9C0078AACB /* SecondViewController.swift */,
 				911FB2A3251240A600DEE772 /* FirstTableViewController.swift */,
+				916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */,
 				911FB2A7251266CD00DEE772 /* SecondTableViewController.swift */,
 				9126C72A252B260A00ED0D5D /* TeamsTableViewCell.swift */,
 				912E9200250A2FE30078AACB /* DriversViewController.swift */,
 				911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */,
 				918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */,
 				914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */,
+				916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */,
 				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
 				912E91EF250A2E9C0078AACB /* Main.storyboard */,
 				912E91F5250A2E9E0078AACB /* Assets.xcassets */,
@@ -322,6 +328,7 @@
 				91FC3FB8251A13CE003FBF97 /* ResultsModel.swift in Sources */,
 				911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */,
 				918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */,
+				916A4FFE25336CC700EC0FDA /* DetailCircuitViewController.swift in Sources */,
 				91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */,
 				912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */,
 				912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */,
@@ -337,6 +344,7 @@
 				911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */,
 				9126C72B252B260A00ED0D5D /* TeamsTableViewCell.swift in Sources */,
 				911FB2A625125C2200DEE772 /* DetailDriverInfoViewController.swift in Sources */,
+				916A4FFC25330C7C00EC0FDA /* DriverTableViewCell.swift in Sources */,
 				912E91EA250A2E9C0078AACB /* SceneDelegate.swift in Sources */,
 				91FC3FB6251A1387003FBF97 /* ResultsNetworkService.swift in Sources */,
 				911FB2A8251266CD00DEE772 /* SecondTableViewController.swift in Sources */,

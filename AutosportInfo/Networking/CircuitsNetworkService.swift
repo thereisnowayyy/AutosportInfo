@@ -11,7 +11,7 @@ import Foundation
 class CircuitsNetworkService {
     func request(urlString: String, completion: @escaping (Result<CircuitStart?, Error>) -> Void) {
         guard let url = URL(string: urlString) else {return}
-        let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 5.0)
+        let urlReq = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 7.0)
         
          URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
             let queue = DispatchQueue.global(qos: .userInteractive)

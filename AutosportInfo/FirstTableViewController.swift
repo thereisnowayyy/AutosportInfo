@@ -11,7 +11,7 @@ import DateToolsSwift
 
 class FirstTableViewController: UITableViewController {
     let networkService = NetworkService()
-    var jsonInfo: Welcome? = nil
+    var jsonInfo: Welcome? 
     
  /*  @IBAction func backToTable(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -80,7 +80,7 @@ class FirstTableViewController: UITableViewController {
     }
     
     override  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings.count ?? 0
+        return jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings.count ?? 0
     }
         
    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -95,20 +95,22 @@ class FirstTableViewController: UITableViewController {
                 completion: nil)
     }
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let driver = self.jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row]
-        let text = "\(driver!.driver.givenName)" + " " + "\(driver!.driver.familyName)"
-        cell.textLabel?.text = text
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> DriverTableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DriverTableViewCell 
+        let driver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row]
+        let name = driver?.driver.givenName ?? ""
+        let familyName = driver?.driver.familyName ?? ""
+        let fullName = "\(name)" + " " + "\(familyName)"
+        cell.driverFullName.text = fullName
+        cell.driversPoints.text = driver?.points
+        cell.driversTeam.text = driver?.constructors[Int()].name
+                
         
-        
-        cell.textLabel?.adjustsFontSizeToFitWidth = true
-        cell.detailTextLabel?.text = driver?.constructors[Int()].name
         return cell
             }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        table.deselectRow(at: indexPath, animated: true)
         
         guard let detailDriverInfo = self.storyboard?.instantiateViewController(identifier: "DetailDriverInfoVC") as? DetailDriverInfoViewController else {return}
         

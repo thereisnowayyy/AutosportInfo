@@ -75,7 +75,7 @@ class SecondTableViewController: UITableViewController {
     }
     
     @IBAction func refreshControl(_ sender: UIRefreshControl) {
-        refreshControl?.beginRefreshing()
+     //   refreshControl?.beginRefreshing()
     }
     
     
@@ -113,7 +113,7 @@ class SecondTableViewController: UITableViewController {
         cell.countWins.text = teams?.wins
         cell.countPosition.text = teams?.position
         cell.countPoints.text = teams?.points
-    tableView.tableFooterView = UIView()
-    return cell
+        tableView.tableFooterView = UIView()
+        return cell
         }
 }

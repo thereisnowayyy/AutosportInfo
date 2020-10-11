@@ -19,6 +19,7 @@ class CircuitsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.separatorStyle = .none
         let urlString = "https://ergast.com/api/f1/2020/Circuits/.json"
             circuitNetworkService.request(urlString: urlString) { (result) in
                 switch result {
@@ -52,7 +53,7 @@ class CircuitsTableViewController: UITableViewController {
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshControl!.isRefreshing {
-            let urlString = "https://ergast.com/api/f1/2020/Circuits/.json"
+            let urlString = "https://ergast.com/api/f1/2020/Circuits.json"
             circuitNetworkService.request(urlString: urlString) { [self] (result) in
                     switch result {
                     case .success(let circuits):
@@ -95,8 +96,18 @@ class CircuitsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 90
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        table.deselectRow(at: indexPath, animated: true)
+        
+        guard let detailCircuitInfo = self.storyboard?.instantiateViewController(identifier: "DetailCircVC") as? DetailCircuitViewController else {return}
+        
+        navigationController?.pushViewController(detailCircuitInfo, animated: true)
+    }
+    
+    
     
     // MARK: - Table view data source
 
@@ -108,8 +119,13 @@ class CircuitsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CircuitTableViewCell
         let circuitName = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].circuitName
         
+        cell.cellView.layer.cornerRadius = 15
+        
+        
         cell.circuitNameLabel.text = circuitName
+        
         tableView.tableFooterView = UIView()
+        
         let imageBahrain = UIImage(named: "bahrain")
         let imageSpain = UIImage(named: "spain")
         let imageHungary = UIImage(named: "hungary")
