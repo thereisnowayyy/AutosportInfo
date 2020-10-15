@@ -22,16 +22,16 @@ class NetworkService {
              }
                  }
                  guard let data = data else {return}
-                 do {
-                     let driverInfo = try JSONDecoder().decode(Welcome.self, from: data)
-                    DispatchQueue.main.async {
-                     completion(.success(driverInfo))
+                    do {
+                        let driverInfo = try JSONDecoder().decode(Welcome.self, from: data)
+                        DispatchQueue.main.async {
+                            completion(.success(driverInfo))
 
                  }
                  }
-                 catch let jsonError {
-                     print("Failed to decode JSON", jsonError)
-                     completion(.failure(jsonError))
+                    catch let jsonError {
+                        print("Failed to decode JSON", jsonError)
+                        completion(.failure(jsonError))
                  }
                 }
         }.resume()

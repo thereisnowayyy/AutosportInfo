@@ -72,7 +72,6 @@ class CircuitsTableViewController: UITableViewController {
                             alert.addAction(action)
                             present(alert, animated: true, completion: nil)
                         refreshControl?.endRefreshing()
-                        print(error)
                         }
                     }
             }

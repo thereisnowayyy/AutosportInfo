@@ -20,13 +20,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Formula1-Regular.ttf</string>
-		<string>Formula1-Black.ttf</string>
-		<string>Formula1-Wide.ttf</string>
-		<string>Formula1-Bold.ttf</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

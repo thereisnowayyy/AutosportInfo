@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		911CDA9D252333BC00EB79D9 /* Formula1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */; };
-		911CDA9E252333BC00EB79D9 /* Formula1-Wide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */; };
-		911CDA9F252333BC00EB79D9 /* Formula1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */; };
-		911CDAA0252333BC00EB79D9 /* Formula1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */; };
-		911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911CDAA1252337F600EB79D9 /* UIFont.swift */; };
 		911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB29F2510FAA500DEE772 /* NetworkService.swift */; };
 		911FB2A4251240A600DEE772 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A3251240A600DEE772 /* FirstTableViewController.swift */; };
 		911FB2A625125C2200DEE772 /* DetailDriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */; };
@@ -57,11 +52,6 @@
 /* Begin PBXFileReference section */
 		8B8607315C261122BF380BD9 /* Pods_AutosportInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutosportInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91068085252DDC1D0010FE75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold.ttf"; sourceTree = "<group>"; };
-		911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
-		911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Black.ttf"; sourceTree = "<group>"; };
-		911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
-		911CDAA1252337F600EB79D9 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		911FB29F2510FAA500DEE772 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		911FB2A3251240A600DEE772 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDriverInfoViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -134,18 +124,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		911CDA98252333BC00EB79D9 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				911CDAA1252337F600EB79D9 /* UIFont.swift */,
-				911CDA99252333BC00EB79D9 /* Formula1-Bold.ttf */,
-				911CDA9A252333BC00EB79D9 /* Formula1-Wide.ttf */,
-				911CDA9B252333BC00EB79D9 /* Formula1-Black.ttf */,
-				911CDA9C252333BC00EB79D9 /* Formula1-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		911FB2A2251105E000DEE772 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +176,6 @@
 				912E91FA250A2E9E0078AACB /* Info.plist */,
 				9104F840250A746600BD797D /* Models */,
 				911FB2A2251105E000DEE772 /* Networking */,
-				911CDA98252333BC00EB79D9 /* Fonts */,
 				91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */,
 			);
 			path = AutosportInfo;
@@ -267,12 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				912E91F9250A2E9E0078AACB /* LaunchScreen.storyboard in Resources */,
-				911CDAA0252333BC00EB79D9 /* Formula1-Regular.ttf in Resources */,
-				911CDA9F252333BC00EB79D9 /* Formula1-Black.ttf in Resources */,
 				912E91F6250A2E9E0078AACB /* Assets.xcassets in Resources */,
-				911CDA9D252333BC00EB79D9 /* Formula1-Bold.ttf in Resources */,
 				912E91F1250A2E9C0078AACB /* Main.storyboard in Resources */,
-				911CDA9E252333BC00EB79D9 /* Formula1-Wide.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +305,6 @@
 				91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */,
 				912E91EE250A2E9C0078AACB /* SecondViewController.swift in Sources */,
 				912E91EC250A2E9C0078AACB /* FirstViewController.swift in Sources */,
-				911CDAA2252337F700EB79D9 /* UIFont.swift in Sources */,
 				911FB2AA25126B2A00DEE772 /* TeamsModel.swift in Sources */,
 				911FB2AC25126E2100DEE772 /* TeamsNetworkService.swift in Sources */,
 				911FB2A4251240A600DEE772 /* FirstTableViewController.swift in Sources */,

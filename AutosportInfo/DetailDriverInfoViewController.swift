@@ -9,11 +9,15 @@
 import UIKit
 import SafariServices
 
+
 class DetailDriverInfoViewController: UIViewController {
     
+    
+    
+    
     @IBAction func goToWiki(_ sender: Any) {
-        let url = URL(string: driverUrlString)
-        let safariVC = SFSafariViewController(url: url!)
+        guard let url = URL(string: driverUrlString) else {return}
+        let safariVC = SFSafariViewController(url: url)
         present(safariVC, animated: true, completion: nil)
         
     }
@@ -50,58 +54,23 @@ class DetailDriverInfoViewController: UIViewController {
     var driverWins: String!
     var seasonStanding: String!
     
-    
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewForInfo.layer.cornerRadius = 15
-        viewForInfo.layer.borderColor =
-            UIColor.black.cgColor
-        viewForInfo.layer.borderWidth = 3
+        
+        configureViews()
         
         
-        viewForWins.layer.cornerRadius = viewForInfo.layer.cornerRadius
-        viewForWins.layer.borderColor = viewForInfo.layer.borderColor
-        viewForWins.layer.borderWidth = viewForInfo.layer.borderWidth
+        imageDownloader()
         
-        seasonStandingView.layer.cornerRadius = viewForInfo.layer.cornerRadius
-        seasonStandingView.layer.borderColor =
-            viewForInfo.layer.borderColor
-        seasonStandingView.layer.borderWidth =
-            viewForInfo.layer.borderWidth
-        
-        viewForPoints.layer.cornerRadius =
-            viewForInfo.layer.cornerRadius
-        viewForPoints.layer.borderColor = viewForInfo.layer.borderColor
-        viewForPoints.layer.borderWidth = viewForInfo.layer.borderWidth
-        
-        viewForAge.layer.cornerRadius = viewForInfo.layer.cornerRadius
-        viewForAge.layer.borderColor = viewForInfo.layer.borderColor
-        viewForAge.layer.borderWidth = viewForInfo.layer.borderWidth
-        
-        
-        champStanding.text = seasonStanding
-        winsOfDriver.text = driverWins
-        pointsOfDriver.text = driverPoints
-        nationality.text = driverNationality
-        navigationController?.navigationBar.barTintColor = .gray
-        let gradient = CAGradientLayer()
-        
-        gradient.frame = entryView.bounds
-        gradient.colors = [UIColor.black.cgColor,
-                        UIColor.gray.cgColor]
-        entryView.layer.insertSublayer(gradient, at: 0)
-        gradient.isOpaque = false
         
         driverAge.text = driverBirth
         nameDriver.text = driverName
         lastNameDriver.text = driverLastName
         driverTeam.text = teamOfDriver
         driverNumber.text = driverPermanentNumber
-        
-        imageDownloader()
         
         
         driverImage.alpha = 0.0
@@ -111,28 +80,59 @@ class DetailDriverInfoViewController: UIViewController {
             })
     }
     
+    
+    func configureViews() {
+        
+        let allViews = [viewForInfo,viewForWins,viewForAge,viewForPoints,seasonStandingView]
+        allViews.forEach { $0?.layer.cornerRadius = 15
+            $0?.layer.borderColor = UIColor.black.cgColor
+            $0?.layer.borderWidth = 3
+        }
+    
+    
+    champStanding.text = seasonStanding
+    winsOfDriver.text = driverWins
+    pointsOfDriver.text = driverPoints
+    nationality.text = driverNationality
+        
+    navigationController?.navigationBar.barTintColor = .lightGray
+    
+        
+    let gradient = CAGradientLayer()
+    gradient.frame = entryView.bounds
+    gradient.colors = [UIColor.black.cgColor,
+                    UIColor.gray.cgColor]
+    entryView.layer.insertSublayer(gradient, at: 0)
+    gradient.isOpaque = false
+    
+    }
+    
+    
+    
+    
+    
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 
 
     func downloadImage(from url: URL) {
+        print("FUNC 2 HAS STARTED")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async() {
+                print("TESTING")
                 self.driverImage.image = UIImage(data: data)
             }
         }
     }
     
-    
-        func imageDownloader() {
+      func imageDownloader() {
             switch driverCode {
             case "HAM":
                     if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col-retina/image.png"){
                         driverImage.contentMode = .scaleAspectFit
                         downloadImage(from: url)
-                       // driverImage.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                     }
             case "BOT":
                     if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/2col-retina/image.png") {
@@ -219,8 +219,8 @@ class DetailDriverInfoViewController: UIViewController {
                 downloadImage(from: url)}
     default:
         break
-    }
-}
+            }
+      }
 }
 /*    extension UIImageView {
         var contentClippingRect: CGRect {
