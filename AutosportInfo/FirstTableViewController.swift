@@ -114,6 +114,7 @@ class FirstTableViewController: UITableViewController {
         
         guard let detailDriverInfo = self.storyboard?.instantiateViewController(identifier: "DetailDriverInfoVC") as? DetailDriverInfoViewController else {return}
         
+        
         detailDriverInfo.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
         
         detailDriverInfo.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position

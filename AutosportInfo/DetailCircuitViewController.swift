@@ -51,7 +51,6 @@ class DetailCircuitViewController: UIViewController {
         switch circuitId {
         case "bahrain":
             if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png.transform/7col-retina/image.png"){
-                circImageView.contentMode = .scaleAspectFit
                 downloadImage(from: url)}
     
         case "catalunya":

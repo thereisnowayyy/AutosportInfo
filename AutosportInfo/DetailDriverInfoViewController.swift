@@ -10,11 +10,16 @@ import UIKit
 import SafariServices
 
 
+
+
 class DetailDriverInfoViewController: UIViewController {
     
-    
-    
-    
+    var driverImageDownloader = DriverImageDownloader()
+ 
+      
+   
+ 
+
     @IBAction func goToWiki(_ sender: Any) {
         guard let url = URL(string: driverUrlString) else {return}
         let safariVC = SFSafariViewController(url: url)
@@ -61,10 +66,12 @@ class DetailDriverInfoViewController: UIViewController {
         super.viewDidLoad()
         
         configureViews()
-        
-        
-        imageDownloader()
-        
+       
+        driverImageDownloader.getDriverImage(driverCode: driverCode) { image in
+            DispatchQueue.main.async {
+                self.driverImage.image = image
+            }
+        }
         
         driverAge.text = driverBirth
         nameDriver.text = driverName
@@ -90,45 +97,44 @@ class DetailDriverInfoViewController: UIViewController {
         }
     
     
-    champStanding.text = seasonStanding
-    winsOfDriver.text = driverWins
-    pointsOfDriver.text = driverPoints
-    nationality.text = driverNationality
+        champStanding.text = seasonStanding
+        winsOfDriver.text = driverWins
+        pointsOfDriver.text = driverPoints
+        nationality.text = driverNationality
+            
+        navigationController?.navigationBar.barTintColor = .lightGray
+            
+        let gradient = CAGradientLayer()
+        gradient.frame = entryView.bounds
+        gradient.colors = [UIColor.black.cgColor,
+                        UIColor.gray.cgColor]
+        entryView.layer.insertSublayer(gradient, at: 0)
+        gradient.isOpaque = false
         
-    navigationController?.navigationBar.barTintColor = .lightGray
-    
-        
-    let gradient = CAGradientLayer()
-    gradient.frame = entryView.bounds
-    gradient.colors = [UIColor.black.cgColor,
-                    UIColor.gray.cgColor]
-    entryView.layer.insertSublayer(gradient, at: 0)
-    gradient.isOpaque = false
+        driverImage.contentMode = .scaleAspectFit
     
     }
     
     
-    
-    
-    
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+/*    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 
 
     func downloadImage(from url: URL) {
-        print("FUNC 2 HAS STARTED")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() {
-                print("TESTING")
+            DispatchQueue.main.async {
                 self.driverImage.image = UIImage(data: data)
-            }
         }
     }
+    }
     
-      func imageDownloader() {
-            switch driverCode {
+   
+
+    func imageDownloader() {
+        
+        switch driverCode {
             case "HAM":
                     if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col-retina/image.png"){
                         driverImage.contentMode = .scaleAspectFit
@@ -221,7 +227,12 @@ class DetailDriverInfoViewController: UIViewController {
         break
             }
       }
+     */
+    
+    
+
 }
+
 /*    extension UIImageView {
         var contentClippingRect: CGRect {
             guard let image = image else { return bounds }

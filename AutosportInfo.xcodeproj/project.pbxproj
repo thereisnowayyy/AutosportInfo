@@ -27,6 +27,7 @@
 		9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */; };
 		916A4FFC25330C7C00EC0FDA /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */; };
 		916A4FFE25336CC700EC0FDA /* DetailCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */; };
+		9172209825397A4B00094DB9 /* DriverImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172209725397A4B00094DB9 /* DriverImageDownloader.swift */; };
 		91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */; };
 		918DB4402518B85F00341DFA /* CircuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */; };
 		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
@@ -74,6 +75,7 @@
 		9158D3DF2517DE860091D2A2 /* CircuitsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsNetworkService.swift; sourceTree = "<group>"; };
 		916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCircuitViewController.swift; sourceTree = "<group>"; };
+		9172209725397A4B00094DB9 /* DriverImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverImageDownloader.swift; sourceTree = "<group>"; };
 		91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		918DB43F2518B85F00341DFA /* CircuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */,
 				916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */,
 				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
+				9172209725397A4B00094DB9 /* DriverImageDownloader.swift */,
 				912E91EF250A2E9C0078AACB /* Main.storyboard */,
 				912E91F5250A2E9E0078AACB /* Assets.xcassets */,
 				912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 				914E4BBE252E73510013D144 /* CircuitsTableViewCell.swift in Sources */,
 				9158D3E02517DE860091D2A2 /* CircuitsNetworkService.swift in Sources */,
 				912E9201250A2FE30078AACB /* DriversViewController.swift in Sources */,
+				9172209825397A4B00094DB9 /* DriverImageDownloader.swift in Sources */,
 				912E91E8250A2E9C0078AACB /* AppDelegate.swift in Sources */,
 				91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */,
 				911FB2A02510FAA500DEE772 /* NetworkService.swift in Sources */,
