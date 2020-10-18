@@ -104,7 +104,13 @@ class CircuitsTableViewController: UITableViewController {
         guard let detailCircuitInfo = self.storyboard?.instantiateViewController(identifier: "DetailCircVC") as? DetailCircuitViewController else {return}
         
         detailCircuitInfo.circuitId = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].circuitId
+        
         detailCircuitInfo.circuitName = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].circuitName
+        
+        detailCircuitInfo.circCountry = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].location.country
+        
+        detailCircuitInfo.circLocality = circuitJsonData?.mrData.circuitTable.circuits[indexPath.row].location.locality
+        
         navigationController?.pushViewController(detailCircuitInfo, animated: true)
     }
     
