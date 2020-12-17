@@ -3,13 +3,11 @@
 //  AutosportInfo
 //
 
-
 import Moya
 
 extension Server {
     
     final class ResponseHandler {
-        
         
         private let jsonDecoder = JSONDecoder()
         private let response: Result<Response, MoyaError>

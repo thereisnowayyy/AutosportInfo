@@ -7,7 +7,7 @@
 
 import DateToolsSwift
 
-class FirstTableViewController: UITableViewController {
+class DriversTableViewController: UITableViewController {
     
     var jsonInfo: DriversInfo?
     @IBOutlet weak var table: UITableView!
@@ -95,6 +95,7 @@ class FirstTableViewController: UITableViewController {
         
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DriverTableViewCell 
         let driver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row]
+        
         let name = driver?.driver.givenName ?? ""
         let familyName = driver?.driver.familyName ?? ""
         let fullName = "\(name)" + " " + "\(familyName)"
@@ -113,33 +114,27 @@ class FirstTableViewController: UITableViewController {
         guard let detailDriverInfo = self.storyboard?.instantiateViewController(identifier: "DetailDriverInfoVC") as? DetailDriverInfoViewController else {return}
         
         detailDriverInfo.driverPoints = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].points
-        
         detailDriverInfo.seasonStanding = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].position
         
         detailDriverInfo.driverCode = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.code
-        
         guard let driversBirthday = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.dateOfBirth else {return}
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        guard let dateDriver = dateFormatter.date(from: driversBirthday) else {return}
         
+        guard let dateDriver = dateFormatter.date(from: driversBirthday) else {return}
         let ageString = String((Date() as Date).years(from: dateDriver))
         
         detailDriverInfo.driverBirth = ageString
-        
         detailDriverInfo.driverWins = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].wins
         
         detailDriverInfo.driverLastName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.familyName
-        
         detailDriverInfo.driverName = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.givenName
         
         detailDriverInfo.driverNationality = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.nationality
-        
         detailDriverInfo.teamOfDriver = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].constructors[Int()].name
         
         detailDriverInfo.driverPermanentNumber = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.permanentNumber
-        
         detailDriverInfo.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
         
         navigationController?.pushViewController(detailDriverInfo, animated: true)

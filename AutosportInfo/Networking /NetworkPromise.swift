@@ -19,7 +19,6 @@ final class NetworkPromise<T: Decodable> {
     // MARK: - Final Actions
     
     private var checkAction: (T) -> Bool = { _ in true }
-    
     private var thenAction: (T) -> Void = { _ in }
     
     @discardableResult func then(_ action: @escaping (T) -> Void) -> NetworkPromise<T> {

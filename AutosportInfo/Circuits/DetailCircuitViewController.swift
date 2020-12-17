@@ -20,7 +20,7 @@ class DetailCircuitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Circuits"
         imageDownloader()
         circuitNameLabel.text = circuitName
         

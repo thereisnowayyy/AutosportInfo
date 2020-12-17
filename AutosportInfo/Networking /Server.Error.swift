@@ -12,7 +12,6 @@ extension Server {
     struct Error: Swift.Error {
         
         let reason: Reason
-        
         let suspenseTime: TimeInterval?
         
         // MARK: - Life Cycle

@@ -33,10 +33,10 @@ extension Server {
                     
                 case .getCircuitsInfo:
                     target = "Circuits/.json"
-                  
-                case .getRacesResults:
-                    target = "results.json?limit=1000"
-            }
+                    
+                case .getRacesResults:   #warning ("need to fix")
+                    target = "races.json"
+            } 
             
             return "/\(target)"
             

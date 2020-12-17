@@ -29,7 +29,6 @@
 		916A4FFC25330C7C00EC0FDA /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */; };
 		916A4FFE25336CC700EC0FDA /* DetailCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */; };
 		9172209825397A4B00094DB9 /* DriverImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172209725397A4B00094DB9 /* DriverImageDownloader.swift */; };
-		91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */; };
 		918DB4402518B85F00341DFA /* CircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918DB43F2518B85F00341DFA /* CircuitsViewController.swift */; };
 		91A363BE2518FB7200B739D8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A363BD2518FB7200B739D8 /* StatsViewController.swift */; };
 		91EF053E250BFC4F007F12E1 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF053D250BFC4F007F12E1 /* Drivers.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		8B8607315C261122BF380BD9 /* Pods_AutosportInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutosportInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91068085252DDC1D0010FE75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		911FB2A3251240A600DEE772 /* DriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversViewController.swift; sourceTree = "<group>"; };
 		911FB2A525125C2200DEE772 /* DetailDriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDriverInfoViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		911FB2A7251266CD00DEE772 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -69,15 +67,14 @@
 		912E91E4250A2E9C0078AACB /* AutosportInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutosportInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		912E91E7250A2E9C0078AACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912E91E9250A2E9C0078AACB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		912E91F0250A2E9C0078AACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		912E91F5250A2E9E0078AACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		912E91F8250A2E9E0078AACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912E91FA250A2E9E0078AACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTableViewCell.swift; sourceTree = "<group>"; };
+		91642318258B664B00107DEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91642319258B664B00107DEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		916A4FFB25330C7C00EC0FDA /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCircuitViewController.swift; sourceTree = "<group>"; };
 		9172209725397A4B00094DB9 /* DriverImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverImageDownloader.swift; sourceTree = "<group>"; };
-		91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		918DB43F2518B85F00341DFA /* CircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsViewController.swift; sourceTree = "<group>"; };
 		91A363BD2518FB7200B739D8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		91EF053D250BFC4F007F12E1 /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
@@ -173,7 +170,6 @@
 				912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */,
 				912E91FA250A2E9E0078AACB /* Info.plist */,
 				9104F840250A746600BD797D /* Models */,
-				91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */,
 			);
 			path = AutosportInfo;
 			sourceTree = "<group>";
@@ -201,7 +197,7 @@
 		9192783A258A294200FC159B /* Circuits */ = {
 			isa = PBXGroup;
 			children = (
-				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
+				918DB43F2518B85F00341DFA /* CircuitsViewController.swift */,
 				914E4BBD252E73510013D144 /* CircuitsTableViewCell.swift */,
 				916A4FFD25336CC600EC0FDA /* DetailCircuitViewController.swift */,
 			);
@@ -211,7 +207,7 @@
 		9192783C258A29B300FC159B /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				918DB43F2518B85F00341DFA /* CircuitsViewController.swift */,
+				91A363BD2518FB7200B739D8 /* StatsViewController.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -260,7 +256,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				ru,
 			);
 			mainGroup = 912E91DB250A2E9C0078AACB;
@@ -338,7 +333,6 @@
 				911FB2B22517D66900DEE772 /* CircuitModel.swift in Sources */,
 				918DB4402518B85F00341DFA /* CircuitsViewController.swift in Sources */,
 				916A4FFE25336CC700EC0FDA /* DetailCircuitViewController.swift in Sources */,
-				91888452252E22ED00B2CEFA /* DataModel.xcdatamodeld in Sources */,
 				9123EF622541922C00A10866 /* NetworkPromise.swift in Sources */,
 				9123EF6B2541D64000A10866 /* ResponseHandler.swift in Sources */,
 				9123EF642541BFE800A10866 /* Server.Error.swift in Sources */,
@@ -366,8 +360,7 @@
 		912E91EF250A2E9C0078AACB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				912E91F0250A2E9C0078AACB /* Base */,
-				91068085252DDC1D0010FE75 /* ru */,
+				91642318258B664B00107DEE /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -375,7 +368,7 @@
 		912E91F7250A2E9E0078AACB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				912E91F8250A2E9E0078AACB /* Base */,
+				91642319258B664B00107DEE /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -567,19 +560,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		91888450252E22ED00B2CEFA /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 91888451252E22ED00B2CEFA /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 912E91DC250A2E9C0078AACB /* Project object */;
 }

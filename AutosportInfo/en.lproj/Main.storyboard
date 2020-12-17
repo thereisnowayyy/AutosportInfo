@@ -11,7 +11,7 @@
         <!--Drivers-->
         <scene sceneID="HHd-OI-Yqq">
             <objects>
-                <tableViewController id="S80-gv-TnG" customClass="FirstTableViewController" customModule="AutosportInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="S80-gv-TnG" customClass="DriversTableViewController" customModule="AutosportInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sov-6t-iA1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,7 +271,7 @@
             </objects>
             <point key="canvasLocation" x="1805.7971014492755" y="377.67857142857139"/>
         </scene>
-        <!--Circuits-->
+        <!--Circuits Table View Controller-->
         <scene sceneID="98z-Ex-gJe">
             <objects>
                 <tableViewController id="q1a-Jk-vj9" customClass="CircuitsTableViewController" customModule="AutosportInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -333,10 +333,11 @@
                             <outlet property="delegate" destination="q1a-Jk-vj9" id="dj6-nH-MBu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Circuits" id="lfh-fV-76u"/>
+                    <navigationItem key="navigationItem" id="lfh-fV-76u"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="E5o-o0-fAB">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
                         <connections>
                             <action selector="refreshControl:" destination="q1a-Jk-vj9" eventType="valueChanged" id="Z0e-h8-lyf"/>
                         </connections>
@@ -756,7 +757,7 @@
             </objects>
             <point key="canvasLocation" x="2610" y="-327"/>
         </scene>
-        <!--Root View Controller-->
+        <!--GP Results-->
         <scene sceneID="kZe-3S-RgV">
             <objects>
                 <tableViewController id="qm9-R5-uL5" customClass="StatsViewController" customModule="AutosportInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -779,7 +780,7 @@
                             <outlet property="delegate" destination="qm9-R5-uL5" id="6H2-uc-0H5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="RCx-A2-Tvs"/>
+                    <navigationItem key="navigationItem" title="GP Results" id="RCx-A2-Tvs"/>
                     <connections>
                         <outlet property="resultsTable" destination="rVK-yz-cJC" id="OnO-aS-4NH"/>
                     </connections>
@@ -808,7 +809,7 @@
         <!--Drivers-->
         <scene sceneID="ZhC-eh-wSV">
             <objects>
-                <navigationController id="fxF-hy-xjD" customClass="DriversViewController" customModule="AutosportInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="fxF-hy-xjD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Drivers" id="6pe-AW-MxL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f3A-ZB-4UN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
