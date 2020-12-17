@@ -2,15 +2,8 @@
 //  File.swift
 //  AutosportInfo
 //
-//  Created by Egor Salnikov on 16.10.2020.
-//  Copyright © 2020 Egor Salnikov. All rights reserved.
-//
 
-import Foundation
 import UIKit
-
-
-
 
  class DriverImageDownloader {
  
@@ -18,13 +11,11 @@ import UIKit
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 
-
     func downloadImage(from url: URL, completion: @escaping (UIImage) -> Void) {
         getData(from: url) { data, response, error in
             guard let data = data, let image = UIImage(data: data), error == nil else {
                 return
             }
-            
             completion(image)
         }
     }
@@ -160,32 +151,42 @@ import UIKit
                         completion(image)
                 }
             }
-    default:
-        break
+            default:
+                break
             }
       }
     
    enum driversCode: String, CodingKey {
     case ham = "HAM"
     case bot = "BOT"
+    
     case ver = "VER"
     case nor = "NOR"
+    
     case alb = "ALB"
     case str = "STR"
+    
     case ric = "RIC"
     case lec = "LEC"
+    
     case per = "PER"
     case gas = "GAS"
+    
     case sai = "SAI"
     case oco = "OCO"
+    
     case vet = "VET"
     case kvy = "KVY"
+    
     case hul = "HUL"
     case rai = "RAI"
+    
     case gio = "GIO"
     case mag = "MAG"
+    
     case lat = "LAT"
     case rus = "RUS"
+    
     case gro = "GRO"
     }
 }

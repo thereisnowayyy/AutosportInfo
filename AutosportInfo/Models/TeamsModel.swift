@@ -2,15 +2,12 @@
 //  TeamsModel.swift
 //  AutosportInfo
 //
-//  Created by Egor Salnikov on 16.09.2020.
-//  Copyright © 2020 Egor Salnikov. All rights reserved.
-//
-
-import Foundation
 
 
 // MARK: - Teams
+
 struct Teams: Codable {
+    
     let mrDataTeams: TeamMRData
 
     enum CodingKeys: String, CodingKey {
@@ -19,7 +16,9 @@ struct Teams: Codable {
 }
 
 // MARK: - MRData
+
 struct TeamMRData: Codable {
+    
     let xmlns: String
     let series: String
     let url: String
@@ -29,6 +28,7 @@ struct TeamMRData: Codable {
     let standingsTable: TeamStandingsTable
 
     enum CodingKeys: String, CodingKey {
+        
         case xmlns
         case series
         case url
@@ -40,23 +40,29 @@ struct TeamMRData: Codable {
 }
 
 // MARK: - StandingsTable
+
 struct TeamStandingsTable: Codable {
+    
     let season: String
     let standingsLists: [TeamStandingsList]
 
     enum CodingKeys: String, CodingKey {
+        
         case season
         case standingsLists = "StandingsLists"
     }
 }
 
 // MARK: - StandingsList
+
 struct TeamStandingsList: Codable {
+    
     let season: String
     let round: String
     let constructorStandings: [ConstructorStanding]
 
     enum CodingKeys: String, CodingKey {
+        
         case season
         case round
         case constructorStandings = "ConstructorStandings"
@@ -64,7 +70,9 @@ struct TeamStandingsList: Codable {
 }
 
 // MARK: - ConstructorStanding
+
 struct ConstructorStanding: Codable {
+    
     let position: String
     let positionText: String
     let points: String
@@ -72,6 +80,7 @@ struct ConstructorStanding: Codable {
     let constructor: ConstructorTeams
 
     enum CodingKeys: String, CodingKey {
+        
         case position
         case positionText
         case points
@@ -81,13 +90,16 @@ struct ConstructorStanding: Codable {
 }
 
 // MARK: - Constructor
+
 struct ConstructorTeams: Codable {
+    
     let constructorId: String
     let url: String
     let name: String
     let nationality: String
 
     enum CodingKeys: String, CodingKey {
+        
         case constructorId
         case url
         case name
