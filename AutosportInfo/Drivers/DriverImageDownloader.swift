@@ -21,7 +21,7 @@ import UIKit
     }
     
     func getDriverImage(driverCode: String, completion: @escaping (UIImage) -> Void) {
-            switch driverCode {
+        switch driverCode {
             case driversCode.ham.rawValue:
                 if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col-retina/image.png") {
                         downloadImage(from: url) { image in
@@ -151,6 +151,18 @@ import UIKit
                         completion(image)
                 }
             }
+            case driversCode.ait.rawValue:
+                if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/J/JACAIT01_Jack_Aitken/jacait01.png.transform/2col-retina/image.png") {
+                    downloadImage(from: url) { image in
+                        completion(image)
+                    }
+                }
+            case driversCode.fit.rawValue:
+                if let url = URL(string: "https://www.formula1.com/content/dam/fom-website/drivers/P/PIEFIT01_Pietro_Fittipaldi/piefit01.png.transform/2col-retina/image.png") {
+                    downloadImage(from: url) { image in
+                        completion(image)
+                    }
+                }
             default:
                 break
             }
@@ -188,6 +200,9 @@ import UIKit
     case rus = "RUS"
     
     case gro = "GRO"
+    case ait = "AIT"
+    
+    case fit = "FIT"
     }
 }
 
