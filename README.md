@@ -1,3 +1,9 @@
-This is my first ios Application 
+This is my first ios app. 
+in this app you can see Formula 1 info of season 2021 - Driver Stats, Teams Stats and see Circuits. 
 
-Приложение по тематике Ф1 сезона 2020.
+API provided by: 
+https://ergast.com/mrd/
+
+TODO: 
+Support years changing in app 
+Refactoring, code-style, and etc.
