@@ -3,10 +3,11 @@
 //  AutosportInfo
 //
 
+#warning("требуется рефакторинг")
 
 import UIKit
 
-class StatsViewController: UITableViewController {
+final class StatsViewController: UITableViewController {
     
     var resultJsonData: ResultsStart? = nil
     @IBOutlet weak var resultsTable: UITableView!
@@ -43,6 +44,7 @@ class StatsViewController: UITableViewController {
         
         cell.textLabel?.text = gpName
         tableView.tableFooterView = UIView()
+        
         return cell
     }
         

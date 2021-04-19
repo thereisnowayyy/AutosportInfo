@@ -3,11 +3,9 @@
 //  AutosportInfo
 //
 
-
-
 import DateToolsSwift
 
-class DriversTableViewController: UITableViewController {
+final class DriversTableViewController: UITableViewController {
     
     var jsonInfo: DriversInfo?
     @IBOutlet weak var table: UITableView!
@@ -21,26 +19,11 @@ class DriversTableViewController: UITableViewController {
         refreshControl?.endRefreshing()
     }
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            NetworkHelper.instance.getDriverStandings().then { result in
-                
-                self.jsonInfo = result
-                self.table.reloadData()
-                
-                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                }, completion: nil)
-            }.catch { Error in
-                
-                let alert = UIAlertController(title: "Ошибка сети", message: "Вероятно, отсутствует подключение к интернету", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getDriverStandings()
+    }
+    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if refreshControl!.isRefreshing {
             
@@ -138,6 +121,24 @@ class DriversTableViewController: UITableViewController {
         detailDriverInfo.driverUrlString = jsonInfo?.mrData.standingsTable.standingsLists[Int()].driverStandings[indexPath.row].driver.url
         
         navigationController?.pushViewController(detailDriverInfo, animated: true)
-}
+    }
+    
+    func getDriverStandings() {
+        NetworkHelper.instance.getDriverStandings().then { result in
+            
+            self.jsonInfo = result
+            self.table.reloadData()
+            
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            }, completion: nil)
+        }.catch { Error in
+            
+            let alert = UIAlertController(title: "Ошибка сети", message: "Вероятно, отсутствует подключение к интернету", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
 

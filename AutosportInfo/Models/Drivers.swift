@@ -28,12 +28,16 @@ struct MRData: Codable {
     let standingsTable: StandingsTable
 
     enum CodingKeys: String, CodingKey {
+        
         case xmlns
         case series
+        
         case url
         case limit
+        
         case offset
         case total
+        
         case standingsTable = "StandingsTable"
     }
 }
@@ -54,6 +58,7 @@ struct StandingsList: Codable {
     
     let season: String
     let round: String
+    
     let driverStandings: [DriverStanding]
 
     enum CodingKeys: String, CodingKey {
@@ -68,8 +73,10 @@ struct DriverStanding: Codable {
     
     let position: String
     let positionText: String
+    
     let points: String
     let wins: String
+    
     let driver: Driver
     let constructors: [Constructor]
 
@@ -77,8 +84,10 @@ struct DriverStanding: Codable {
         
         case position
         case positionText
+        
         case points
         case wins
+        
         case driver = "Driver"
         case constructors = "Constructors"
     }
@@ -88,6 +97,7 @@ struct DriverStanding: Codable {
     
     let constructorId: String
     let url: String
+    
     let name: String
     let nationality: String
 
@@ -95,6 +105,7 @@ struct DriverStanding: Codable {
         
         case constructorId
         case url
+        
         case name
         case nationality
     }
@@ -104,10 +115,13 @@ struct Driver: Codable {
     
     let driverId: String
     let permanentNumber: String
+    
     let code: String
     let url: String
+    
     let givenName: String
     let familyName: String
+    
     let dateOfBirth: String
     let nationality: String
 
@@ -115,10 +129,13 @@ struct Driver: Codable {
         
         case driverId
         case permanentNumber
+        
         case code
         case url
+        
         case givenName
         case familyName
+        
         case dateOfBirth
         case nationality
     }

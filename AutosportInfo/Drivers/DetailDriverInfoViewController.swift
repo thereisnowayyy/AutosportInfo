@@ -5,7 +5,7 @@
 
 import SafariServices
 
-class DetailDriverInfoViewController: UIViewController {
+final class DetailDriverInfoViewController: UIViewController {
     
     var driverImageDownloader = DriverImageDownloader()
     
@@ -72,8 +72,8 @@ class DetailDriverInfoViewController: UIViewController {
     
     func configureViews() {
         let allViews = [viewForInfo,viewForWins,viewForAge,viewForPoints,seasonStandingView]
-        allViews.forEach { $0?.layer.cornerRadius = 15
-            
+        allViews.forEach {
+            $0?.layer.cornerRadius = 15
             $0?.layer.borderColor = UIColor.black.cgColor
             $0?.layer.borderWidth = 3
         }
@@ -89,9 +89,10 @@ class DetailDriverInfoViewController: UIViewController {
         
         lastNameDriver.text = driverLastName
         driverTeam.text = teamOfDriver
-        driverNumber.text = driverPermanentNumber
         
+        driverNumber.text = driverPermanentNumber
         driverImage.alpha = 0.0
+        
         UIView.animate(withDuration: 2.0,
             animations: { [weak self] in
                 self?.driverImage.alpha = 1.0
@@ -109,4 +110,5 @@ class DetailDriverInfoViewController: UIViewController {
         
         driverImage.contentMode = .scaleAspectFit
     }
+    
 }

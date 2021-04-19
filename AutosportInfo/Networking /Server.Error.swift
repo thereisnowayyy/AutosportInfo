@@ -3,9 +3,7 @@
 //  AutosportInfo
 //
 
-
 import Foundation
-
 
 extension Server {
     

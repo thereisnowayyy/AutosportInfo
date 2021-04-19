@@ -5,8 +5,7 @@ target 'AutosportInfo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'SwiftyJSON'
   pod 'DateToolsSwift'
-  pod 'Moya'
+  pod 'Moya' 
 
 end

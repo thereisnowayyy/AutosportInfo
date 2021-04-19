@@ -110,6 +110,7 @@ class SecondTableViewController: UITableViewController {
         
         cell.countPoints.text = teams?.points
         tableView.tableFooterView = UIView()
+        
         return cell
         }
 }

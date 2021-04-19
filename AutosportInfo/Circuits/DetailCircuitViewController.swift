@@ -6,7 +6,7 @@
 
 import UIKit
 
-class DetailCircuitViewController: UIViewController {
+final class DetailCircuitViewController: UIViewController {
     
     @IBOutlet weak var circuitNameLabel: UILabel!
     @IBOutlet weak var circImageView: UIImageView!

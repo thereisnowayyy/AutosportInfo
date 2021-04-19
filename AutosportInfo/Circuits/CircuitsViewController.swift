@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CircuitsTableViewController: UITableViewController {
+final class CircuitsTableViewController: UITableViewController {
     
     var circuitJsonData: CircuitStart?
     
@@ -13,7 +13,6 @@ class CircuitsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  table.separatorStyle = .none
         
         NetworkHelper.instance.getCircuitInfo().then { result in
             

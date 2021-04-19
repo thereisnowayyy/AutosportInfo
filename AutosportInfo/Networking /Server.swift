@@ -14,7 +14,7 @@ final class Server {
     // MARK: - Static Functions
     
     static func getBaseURL() -> URL {
-        let season = 2020
+        let season = 2021
         return URL(string: "https://ergast.com/api/f1/\(season)")!
     }
     

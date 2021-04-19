@@ -3,8 +3,6 @@
 //  AutosportInfo
 //
 
-
-
 extension Server.Error {
     
     enum Reason: String {

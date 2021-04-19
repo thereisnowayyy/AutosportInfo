@@ -6,7 +6,7 @@
 
 import UIKit
 
-class CircuitTableViewCell: UITableViewCell {
+final class CircuitTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var circuitNameLabel: UILabel!

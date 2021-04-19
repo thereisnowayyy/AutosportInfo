@@ -20,20 +20,26 @@ struct MRDataCircuit: Codable {
     
     let xmlns: String
     let series: String
+    
     let url: String
     let limit: String
+    
     let offset: String
     let total: String
+    
     let circuitTable: CircuitTable
 
     enum CodingKeys: String, CodingKey {
         
         case xmlns
         case series
+        
         case url
         case limit
+        
         case offset
         case total
+        
         case circuitTable = "CircuitTable"
     }
 }
@@ -44,12 +50,14 @@ struct CircuitTable: Codable {
     
     let season: String
     let circuitId: String
+    
     let circuits: [Circuit]
 
     enum CodingKeys: String, CodingKey {
         
         case season
         case circuitId
+        
         case circuits = "Circuits"
     }
 }
@@ -60,6 +68,7 @@ struct Circuit: Codable {
     
     let circuitId: String
     let url: String
+    
     let circuitName: String
     let location: Location
 
@@ -67,6 +76,7 @@ struct Circuit: Codable {
         
         case circuitId
         case url
+        
         case circuitName
         case location = "Location"
     }
@@ -78,6 +88,7 @@ struct Location: Codable {
     
     let lat: String
     let long: String
+    
     let locality: String
     let country: String
 
@@ -85,6 +96,7 @@ struct Location: Codable {
         
         case lat
         case long
+        
         case locality
         case country
     }

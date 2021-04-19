@@ -5,7 +5,7 @@
 
 import UIKit
 
-class DriverTableViewCell: UITableViewCell {
+final class DriverTableViewCell: UITableViewCell {
 
     @IBOutlet weak var driverFullName: UILabel!
     @IBOutlet weak var driversTeam: UILabel!
