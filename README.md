@@ -1,5 +1,5 @@
 This is my first ios app. 
-in this app you can see Formula 1 info of season 2021 - Driver Stats, Teams Stats and see Circuits. 
+In this app you can see Formula 1 info of season 2021 - Driver Stats, Teams Stats and see Circuits. 
 
 API provided by: 
 https://ergast.com/mrd/
